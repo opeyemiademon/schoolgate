@@ -149,7 +149,7 @@
   }
 
   .sidebar{
-    @apply  flex flex-col gap-0.5 mt-1;
+    @apply  flex flex-col gap-0.5 mt-1 ;
   }
 
   .sidebar li.active{
@@ -157,7 +157,7 @@
   }
 
   .sidebar li{
-    @apply hover:bg-color-primary-light px-5 py-2 gap-2 flex flex-row items-center  text-sm hover:text-color-primary cursor-pointer ;
+    @apply hover:bg-color-primary-light px-5 py-2 gap-2 flex flex-row items-center  text-sm hover:text-color-primary cursor-pointer;
   }
 
   .tab>li{
@@ -188,6 +188,27 @@
 
 .form-group{
   @apply  w-full  text-color-gray-2 placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground  flex   bg-transparent px-3 text-base  transition-[color,box-shadow]  disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 outline-none focus-visible:ring-0;
+}
+
+
+.custom-table th, td {
+  @apply border-b border-color-border text-sm ;
+}
+
+.custom-table th {
+  @apply p-2 ;
+}
+
+.custom-table tr:hover {
+  @apply bg-gray-100;
+}
+
+
+.custom-table td>div {
+  @apply p-2 ;
+}
+.cell-active{
+  @apply border-2 border-blue-500 rounded-sm justify-between flex items-center;
 }
 }
 

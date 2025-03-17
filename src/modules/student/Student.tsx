@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { FaCalendar, FaCalendarAlt, FaCaretDown, FaGlobe, FaLink, FaSearch, FaShare, FaSortAlphaUpAlt, FaTrash } from "react-icons/fa"
+import { FaCalendar, FaCalendarAlt, FaCaretDown, FaChevronLeft, FaChevronRight, FaExpand, FaExpandAlt, FaGlobe, FaGraduationCap, FaHistory, FaLink, FaSearch, FaShare, FaSortAlphaUpAlt, FaTrash } from "react-icons/fa"
 import { Input } from "@/components/ui/input"
 import { Switch } from "@/components/ui/switch"
 import { Tooltip } from 'react-tooltip'
@@ -16,6 +16,9 @@ import { Switchsm } from "@/components/ui/switchsm"
 import Select from 'react-tailwindcss-select'
 import { selectStyle } from "@/components/GlobalFunction"
 import { FaArrowLeftLong, FaArrowRightLong, FaX } from "react-icons/fa6"
+import {  ModalEdit } from "./Modal"
+import { Link } from "react-router-dom"
+import { ImportStudent } from "./modal/Import"
 
 const Students = () => {
   const [animal, setAnimal] = useState(null);
@@ -42,12 +45,12 @@ const handleChange = (value:any) => {
    <Template>
 
 <div className="border-b flex justify-between items-center border-color-border w-full py-2 px-6 bg-white">
-<h2 className="flex  gap-2 items-center font-semibold leading-3"><FaCalendarAlt/> Courses</h2>
+<h2 className="flex  gap-2 items-center font-semibold leading-3"><FaGraduationCap className="text-lg"/> Student</h2>
 
 
 
 <div className="flex gap-1 items-center">
-<a href="#" className="text-sm hover:bg-color-primary-light hover:text-color-primary py-3 px-4 rounded-sm cursor-pointer">Import</a>
+<ImportStudent />
 
 <a href="#" className="text-sm hover:bg-color-primary-light hover:text-color-primary py-3 px-4 rounded-sm cursor-pointer">Export</a>
 
@@ -60,8 +63,7 @@ const handleChange = (value:any) => {
 <a href="#" className="text-sm hover:bg-color-primary-light hover:text-color-primary py-3 px-4 rounded-sm cursor-pointer"><FaShare/></a>
 
 
-
-<Button variant={'primary'} size={'md'}>Add New Course</Button>
+<Link to='/student/add' className="rounded-sm   py-2  px-5 bg-color-primary text-white shadow-xs hover:bg-color-primary/80"> Add New Student</Link>
 </div>
 </div>
 
@@ -77,9 +79,9 @@ const handleChange = (value:any) => {
 
 
 
-<div className="px-6 py-4">
+<div className="px-6 py-4 ">
 
-<Card className="p-0">
+<Card className="p-0   ">
   <CardContent className="p-0">
     
 
@@ -115,7 +117,7 @@ const handleChange = (value:any) => {
 <Button onClick={()=>setModal({...Modal, field:!Modal.field})} variant={'white'} size={'md'} className="group rounded-r-none">Hide Fields <FaCaretDown/> </Button>
 
 
-<div className={`bg-white border border-color-border  rounded-md shadow-md absolute mt-2 w-[200px] -left-10  ${Modal.field?'block':'hidden'} `}>
+<div className={`bg-white border border-color-border z-50 rounded-md shadow-md absolute mt-2 w-[200px] -left-10  ${Modal.field?'block':'hidden'} `}>
 
 <Input className="rounded-none h-8" placeholder="Find a field" />
 
@@ -158,18 +160,18 @@ const handleChange = (value:any) => {
 <Button variant={'white'}  size={'md'} className="group border-l-none rounded-l-none rounded-r-none">Row Height <FaCaretDown/> </Button>
 
 
-<div className="bg-white border border-color-border  rounded-md shadow-md absolute mt-2 w-[200px] -left-10 hidden group-hover:block ">
+<div className="bg-white border border-color-border  rounded-md shadow-md absolute  w-[200px] -left-10 hidden group-hover:block ">
 
 
 <ul className="flex flex-col  ">
     
-    <li className="flex items-center gap-2 text-color-gray-2 px-4 py-2 hover:bg-color-primary-light cursor-pointer text-sm"> Short </li>
+    <li className="flex items-center gap-2 text-color-gray-2 px-4 py-2 hover:bg-color-primary-light cursor-pointer text-sm rounded-t-md"> Short </li>
    
     <li className="flex items-center gap-2 text-color-gray-2 px-4 py-2 hover:bg-color-primary-light cursor-pointer text-sm">  Medium  </li>
 
     <li className="flex items-center gap-2 text-color-gray-2 px-4 py-2 hover:bg-color-primary-light cursor-pointer text-sm">  Tall  </li>
 
-    <li className="flex items-center gap-2 text-color-gray-2 px-4 py-2 hover:bg-color-primary-light cursor-pointer text-sm">  Extra Tall </li>
+    <li className="flex items-center gap-2 text-color-gray-2 px-4 py-2 hover:bg-color-primary-light cursor-pointer text-sm rounded-b-md">  Extra Tall </li>
 
 
    
@@ -482,6 +484,12 @@ const handleChange = (value:any) => {
 
 <Button variant={'white'} size={'sm'} disabled>10 Records</Button>
 
+
+<div className="flex flex-row">
+<Button variant={'white'} size={'sm'} className=" border-l-none rounded-r-none"><FaChevronLeft /></Button>
+<Button variant={'white'} size={'sm'} className="hover:bg-transparent cursor-default rounded-none">1 of 2</Button>
+<Button variant={'white'} size={'sm'} className=" border-r-none rounded-l-none"><FaChevronRight /></Button>
+</div>
     </div>
 
 
@@ -552,41 +560,131 @@ const handleChange = (value:any) => {
 
 
 
-<div className="px-5 my-3">
+<div className=" my-10 overflow-scroll max-w-[calc(100vw-370px)]">
+<div className="mx-2">
 
+
+<div className="flex flex-row">
+<Button variant={'white'} size={'md'} className=" border-l-none rounded-r-none">    <input type="checkbox"  />  2 Selected</Button>
+
+<Button variant={'white'} size={'md'} className=" rounded-none">Update</Button>
+
+<Button variant={'white'} size={'md'} className=" border-r-none rounded-l-none">Delete</Button>
+</div>
+
+</div>
 
 <Tooltip id="table" className='z-50' />
 
-<table className="table">
+{/* w-max or w-screen or w-full */}
+<table className="custom-table w-max  ">
   <thead>
     <tr>
-      <td>#</td>
-      <td>Record ID</td>
-      <td>Created At</td>
-      <td>Course Name</td>
-      <td>Course Details</td>
-      <td>Student Capacity</td>
-      <td>Status</td>
+      <th>#</th>
+      <th >SN</th>
+      <th>Record ID</th>
+      <th>Date Added</th>
+      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Profile Picture</div></th>
 
-      <td> <div className="flex items-center"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Instructor</div></td>
+      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Matric No.</div></th>
 
-      <td>Enrollments</td>
-      <td>Average Grade</td>
+      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Student Name</div></th>
+
+      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Gender</div></th>   
+      
+      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Faculty</div></th>
+
+
+      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Department</div></th>
+
+      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Unit</div></th>
+
+
+      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Current Level</div></th>
+
+
+      <th>Entry Mode</th>
+      <th>Status</th>
+      <th >Session</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td><input type="checkbox"  /> </td>
-      <td>67uhdtg</td>
-      <td>Social Science</td>
-      <td>12/08/2025 07:39 AM</td>
-      <td>Social science entails</td>
-      <td>89.00</td>
-      <td> <div className="p-1 px-2 text-white text-sm bg-[#26C836] rounded-full w-max"> Active </div> </td>
+    <tr className=" group">
+      <td > <div className="flex gap-2 group">
+        <input type="checkbox"  /> 
+      
+      <div className=" absolute items-center gap-2 hidden group-hover:flex bg-gray-100 ml-5">
 
-      <td> Onboarding Instructors</td>
-      <td>2</td>
-      <td>80</td>
+        <Link to='/student/edit/8'>
+      <FaExpandAlt  data-tooltip-id="table" data-tooltip-content="Edit Record " className="cursor-pointer text-base text-blue-800" />
+      </Link>
+
+      <FaHistory  data-tooltip-id="table" data-tooltip-content="Record history" className="cursor-pointer text-base text-blue-800" />
+      </div>
+       </div> </td>
+      <td ><div className=" ">1  </div></td>
+      <td ><div className=" ">erfggtt </div></td>
+      <td ><div className=" ">erfggtt </div></td>
+      <td > <div className=" ">22-03-2025  </div></td>
+      <td > <div className="">NSU/NAS/CMP/0035/16/17  <ModalEdit visible={false}  /></div> </td>
+      <td ><div className="cell-active ">Adeleke Monsoor Opeyemi  <ModalEdit visible={true} /></div></td>
+      <td ><div className=" ">Male  <ModalEdit visible={false} /></div></td>
+      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
+      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
+      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
+      <td ><div className=" ">200   <ModalEdit visible={false} /></div></td>
+      <td ><div className=" ">DE   <ModalEdit visible={false} /></div></td>
+      <td ><div className=" "><div className="p-1 px-2 text-white text-sm bg-[#26C836] rounded-full w-max"> Active </div>   <ModalEdit visible={false} /></div>  </td>
+
+      <td > <div className=" ">2024/2025   <ModalEdit visible={false} /></div></td>
+    </tr>
+
+    <tr className=" group">
+      <td > <div className="flex gap-2 group"><input type="checkbox"  /> 
+      
+      <div className=" absolute items-center gap-2 hidden group-hover:flex bg-gray-100 ml-5">
+      <FaExpandAlt  data-tooltip-id="table" data-tooltip-content="Edit Record " className="cursor-pointer text-base text-blue-800" />
+      <FaHistory  data-tooltip-id="table" data-tooltip-content="Record history" className="cursor-pointer text-base text-blue-800" />
+      </div>
+       </div> </td>
+       
+         <td ><div className=" ">1  </div></td>
+      <td ><div className=" ">erfggtt </div></td>
+      <td ><div className=" ">erfggtt </div></td>
+      <td > <div className=" ">22-03-2025  </div></td>
+      <td > <div >NSU/NAS/CMP/0035/16/17  <ModalEdit visible={false}  /></div> </td>
+      <td ><div className=" ">Adeleke Monsoor Opeyemi  <ModalEdit visible={false} /></div></td>
+      <td ><div className=" ">Male  <ModalEdit visible={false} /></div></td>
+      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
+      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
+      <td ><div className=" cell-active">Social Science   <ModalEdit visible={true} /></div></td>
+      <td ><div className=" ">200   <ModalEdit visible={false} /></div></td>
+      <td ><div className=" ">DE   <ModalEdit visible={false} /></div></td>
+      <td ><div className=" "><div className="p-1 px-2 text-white text-sm bg-[#26C836] rounded-full w-max"> Active </div>   <ModalEdit visible={false} /></div>  </td>
+
+      <td > <div className=" ">2024/2025   <ModalEdit visible={false} /></div></td>
+    </tr>
+    <tr className=" group">
+      <td > <div className="flex gap-2 group"><input type="checkbox"  /> 
+      <div className=" absolute items-center gap-2 hidden group-hover:flex bg-gray-100 ml-5">
+      <FaExpandAlt  data-tooltip-id="table" data-tooltip-content="Edit Record " className="cursor-pointer text-base text-blue-800" />
+      <FaHistory  data-tooltip-id="table" data-tooltip-content="Record history" className="cursor-pointer text-base text-blue-800" />
+      </div>
+       </div> </td><td ><div className=" ">1  </div></td>
+      <td ><div className=" ">erfggtt </div></td>
+      <td ><div className=" ">erfggtt </div></td>
+      <td > <div className=" ">22-03-2025  </div></td>
+      <td > <div className="cell-active">NSU/NAS/CMP/0035/16/17  <ModalEdit visible={true}  /></div> </td>
+      <td ><div className=" ">Adeleke Monsoor Opeyemi  <ModalEdit visible={false} /></div></td>
+      <td ><div className=" ">Male  <ModalEdit visible={false} /></div></td>
+      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
+      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
+      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
+      <td ><div className=" ">200   <ModalEdit visible={false} /></div></td>
+      <td ><div className=" ">DE   <ModalEdit visible={false} /></div></td>
+      <td ><div className=" "><div className="p-1 px-2 text-white text-sm bg-[#26C836] rounded-full w-max"> Active </div>   <ModalEdit visible={false} /></div>  </td>
+
+      <td > <div className=" ">2024/2025   <ModalEdit visible={false} /></div></td>
     </tr>
   </tbody>
 </table>
