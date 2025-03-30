@@ -19,6 +19,8 @@ import { FaArrowLeftLong, FaArrowRightLong, FaX } from "react-icons/fa6"
 import {  ModalEdit } from "./Modal"
 import { Link } from "react-router-dom"
 import { ImportStudent } from "./modal/Import"
+import { ExportStudent } from "./modal/Export"
+import { DeleteStudent } from "./modal/Delete"
 
 const Students = () => {
   const [animal, setAnimal] = useState(null);
@@ -52,12 +54,11 @@ const handleChange = (value:any) => {
 <div className="flex gap-1 items-center">
 <ImportStudent />
 
-<a href="#" className="text-sm hover:bg-color-primary-light hover:text-color-primary py-3 px-4 rounded-sm cursor-pointer">Export</a>
-
+<ExportStudent/>
 
 <a href="#" className="text-sm hover:bg-color-primary-light hover:text-color-primary py-3 px-4 rounded-sm cursor-pointer">Batch Operations</a>
 
-<a href="#" className="text-sm hover:bg-color-primary-light hover:text-color-primary py-3 px-4 rounded-sm cursor-pointer"><FaTrash/></a>
+<DeleteStudent/>
 
 
 <a href="#" className="text-sm hover:bg-color-primary-light hover:text-color-primary py-3 px-4 rounded-sm cursor-pointer"><FaShare/></a>
@@ -698,7 +699,7 @@ const handleChange = (value:any) => {
 
 
 
-<div className="flex justify-between items-center bg-white border-t-2 border-t-color-border px-20 py-5 bottom-0 absolute w-full ">
+<div className="flex justify-between items-center bg-white border-t-2 border-t-color-border px-20 py-5 bottom-0 sticky w-full  ">
 
     <h2 className="text-base font-medium">Unsaved Changes</h2>
 

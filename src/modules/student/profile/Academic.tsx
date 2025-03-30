@@ -1,18 +1,12 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Input } from "@/components/ui/input"
-import { Switch } from "@/components/ui/switch"
 import { Textarea } from "@/components/ui/textarea"
 
 import {
     Card,
     CardContent,
   } from "@/components/ui/card"
-import Template from '@/Layout/Template'
-import { FaChevronLeft, FaChevronRight, FaEdit, FaExternalLinkAlt, FaExternalLinkSquareAlt, FaLink, FaSave, FaShare, FaTrash, FaTrashAlt } from 'react-icons/fa'
-import { RefreshCcw } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Link } from 'react-router-dom'
-import { RadioItem } from '@/components/RadioGroup'
 import { selectStyle } from '@/components/GlobalFunction'
 import Select from 'react-tailwindcss-select'
 

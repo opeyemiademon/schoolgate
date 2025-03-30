@@ -152,11 +152,11 @@
     @apply  flex flex-col gap-0.5 mt-1 ;
   }
 
-  .sidebar li.active{
+  .sidebar li>a.active{
     @apply bg-color-primary-light  text-color-primary;
   }
 
-  .sidebar li{
+  .sidebar li>a{
     @apply hover:bg-color-primary-light px-5 py-2 gap-2 flex flex-row items-center  text-sm hover:text-color-primary cursor-pointer;
   }
 
@@ -209,6 +209,14 @@
 }
 .cell-active{
   @apply border-2 border-blue-500 rounded-sm justify-between flex items-center;
+}
+
+.custom-shadow {
+  @apply  shadow-gray-300 drop-shadow-[0_0px_10px_rgba(0,0,0,0.25)];
+}
+
+.custom-shadow-sm {
+  @apply    shadow-[0_3px_10px_rgb(0,0,0,0.2)];
 }
 }
 

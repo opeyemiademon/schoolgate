@@ -15,7 +15,7 @@ import { FaExpandAlt, FaShare } from "react-icons/fa"
 import { selectStyle } from '@/components/GlobalFunction'
 import Select from 'react-tailwindcss-select'
 
-export const ImportStudent =(props:any)=> {
+export const ExportStudent =(props:any)=> {
 
    const [animal, setAnimal] = useState(null);
           const options = [
@@ -32,12 +32,12 @@ export const ImportStudent =(props:any)=> {
   return (
     <Dialog>
       <DialogTrigger asChild>
-      <a href="#" className="text-sm hover:bg-color-primary-light hover:text-color-primary py-3 px-4 rounded-sm cursor-pointer">Import</a>
+      <a href="#" className="text-sm hover:bg-color-primary-light hover:text-color-primary py-3 px-4 rounded-sm cursor-pointer">Export</a>
       
       </DialogTrigger>
-      <DialogContent className=" p-0 min-w-[90%]  ">
+      <DialogContent className=" p-0 min-w-[50%]  ">
         <DialogHeader className="p-4 border-b border-color-border">
-          <DialogTitle >Import New Record</DialogTitle>
+          <DialogTitle >Export</DialogTitle>
         </DialogHeader>
 
 
