@@ -43,7 +43,7 @@ const Parent = () => {
     
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Father Name <span className='text-red-800'>*</span></label>
+    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Father Name <span className='text-red-800'>*</span></label>
         <Input type="text"  className="mt-2" value="FT23POL0123" />
     
     </div>
@@ -51,7 +51,7 @@ const Parent = () => {
     
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Father Phone <span className='text-red-800'>*</span></label>
+    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Father Phone <span className='text-red-800'>*</span></label>
         <Input type="text"  className="mt-2" value="FT23POL0123" />
     
     </div>
@@ -69,14 +69,14 @@ const Parent = () => {
     
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Father Email <span className='text-red-800'>*</span></label>
+    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Father Email <span className='text-red-800'>*</span></label>
         <Input type="text"  className="mt-2" value="FT23POL0123" />
     
     </div>
     
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Father Occupation <span className='text-red-800'>*</span></label>
+    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Father Occupation <span className='text-red-800'>*</span></label>
         <Input type="text"  className="mt-2" value="FT23POL0123" />
     
     </div>
@@ -87,7 +87,7 @@ const Parent = () => {
     
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Father Qualification <span className='text-red-800'>*</span></label>
+    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Father Qualification <span className='text-red-800'>*</span></label>
     <Select
                     value={animal}
                     onChange={handleChange}
@@ -102,7 +102,7 @@ const Parent = () => {
     
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Father Organization <span className='text-red-800'>*</span></label>
+    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Father Organization <span className='text-red-800'>*</span></label>
     <Select
                     value={animal}
                     onChange={handleChange}
@@ -119,7 +119,7 @@ const Parent = () => {
     
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Father Photo</label>
+    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Father Photo</label>
     
     <div className='flex items-center gap-2 w-full'>
     
@@ -134,8 +134,8 @@ const Parent = () => {
     
     <span className='text-color-gray-2 text-sm px-1'>imageonlin...</span>
     
-    <div className='p-1 border-l-2 border-border/70'><FaExternalLinkAlt className='text-sm text-color-gray-2 hover:text-sm hover:text-color-primary cursor-pointer'/></div>
-    <div className='p-1 border-l-2 border-border/70'><FaTrashAlt className='text-sm text-color-gray-2 hover:text-sm hover:text-color-primary cursor-pointer'/></div>
+    <div className='p-1 border-l-2 border-border/70'><FaExternalLinkAlt className='text-sm text-color-gray-2 hover:text-base hover:text-color-primary cursor-pointer'/></div>
+    <div className='p-1 border-l-2 border-border/70'><FaTrashAlt className='text-sm text-color-gray-2 hover:text-base hover:text-color-primary cursor-pointer'/></div>
     </div>
     
         </div>
@@ -172,7 +172,7 @@ const Parent = () => {
     
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Mother Name <span className='text-red-800'>*</span></label>
+    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Mother Name <span className='text-red-800'>*</span></label>
         <Input type="text"  className="mt-2" value="FT23POL0123" />
     
     </div>
@@ -180,7 +180,7 @@ const Parent = () => {
     
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Mother Phone <span className='text-red-800'>*</span></label>
+    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Mother Phone <span className='text-red-800'>*</span></label>
         <Input type="text"  className="mt-2" value="FT23POL0123" />
     
     </div>
@@ -198,14 +198,14 @@ const Parent = () => {
     
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Mother Email <span className='text-red-800'>*</span></label>
+    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Mother Email <span className='text-red-800'>*</span></label>
         <Input type="text"  className="mt-2" value="FT23POL0123" />
     
     </div>
     
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Mother Occupation <span className='text-red-800'>*</span></label>
+    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Mother Occupation <span className='text-red-800'>*</span></label>
         <Input type="text"  className="mt-2" value="FT23POL0123" />
     
     </div>
@@ -216,7 +216,7 @@ const Parent = () => {
     
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Mother Qualification <span className='text-red-800'>*</span></label>
+    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Mother Qualification <span className='text-red-800'>*</span></label>
     <Select
                     value={animal}
                     onChange={handleChange}
@@ -231,7 +231,7 @@ const Parent = () => {
     
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Mother Organization <span className='text-red-800'>*</span></label>
+    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Mother Organization <span className='text-red-800'>*</span></label>
     <Select
                     value={animal}
                     onChange={handleChange}
@@ -248,7 +248,7 @@ const Parent = () => {
     
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Mother Photo</label>
+    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Mother Photo</label>
     
     <div className='flex items-center gap-2 w-full'>
     
@@ -263,8 +263,8 @@ const Parent = () => {
     
     <span className='text-color-gray-2 text-sm px-1'>imageonlin...</span>
     
-    <div className='p-1 border-l-2 border-border/70'><FaExternalLinkAlt className='text-sm text-color-gray-2 hover:text-sm hover:text-color-primary cursor-pointer'/></div>
-    <div className='p-1 border-l-2 border-border/70'><FaTrashAlt className='text-sm text-color-gray-2 hover:text-sm hover:text-color-primary cursor-pointer'/></div>
+    <div className='p-1 border-l-2 border-border/70'><FaExternalLinkAlt className='text-sm text-color-gray-2 hover:text-base hover:text-color-primary cursor-pointer'/></div>
+    <div className='p-1 border-l-2 border-border/70'><FaTrashAlt className='text-sm text-color-gray-2 hover:text-base hover:text-color-primary cursor-pointer'/></div>
     </div>
     
         </div>
@@ -301,7 +301,7 @@ const Parent = () => {
     
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Guardian Name <span className='text-red-800'>*</span></label>
+    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Guardian Name <span className='text-red-800'>*</span></label>
         <Input type="text"  className="mt-2" value="FT23POL0123" />
     
     </div>
@@ -309,7 +309,7 @@ const Parent = () => {
     
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Guardian Phone <span className='text-red-800'>*</span></label>
+    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Guardian Phone <span className='text-red-800'>*</span></label>
         <Input type="text"  className="mt-2" value="FT23POL0123" />
     
     </div>
@@ -327,14 +327,14 @@ const Parent = () => {
     
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Guardian Email <span className='text-red-800'>*</span></label>
+    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Guardian Email <span className='text-red-800'>*</span></label>
         <Input type="text"  className="mt-2" value="FT23POL0123" />
     
     </div>
     
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Guardian Occupation <span className='text-red-800'>*</span></label>
+    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Guardian Occupation <span className='text-red-800'>*</span></label>
         <Input type="text"  className="mt-2" value="FT23POL0123" />
     
     </div>
@@ -345,7 +345,7 @@ const Parent = () => {
     
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Guardian Qualification <span className='text-red-800'>*</span></label>
+    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Guardian Qualification <span className='text-red-800'>*</span></label>
     <Select
                     value={animal}
                     onChange={handleChange}
@@ -360,7 +360,7 @@ const Parent = () => {
     
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Guardian Organization <span className='text-red-800'>*</span></label>
+    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Guardian Organization <span className='text-red-800'>*</span></label>
     <Select
                     value={animal}
                     onChange={handleChange}
@@ -377,7 +377,7 @@ const Parent = () => {
     
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Guardian Photo</label>
+    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Guardian Photo</label>
     
     <div className='flex items-center gap-2 w-full'>
     
@@ -392,8 +392,8 @@ const Parent = () => {
     
     <span className='text-color-gray-2 text-sm px-1'>imageonlin...</span>
     
-    <div className='p-1 border-l-2 border-border/70'><FaExternalLinkAlt className='text-sm text-color-gray-2 hover:text-sm hover:text-color-primary cursor-pointer'/></div>
-    <div className='p-1 border-l-2 border-border/70'><FaTrashAlt className='text-sm text-color-gray-2 hover:text-sm hover:text-color-primary cursor-pointer'/></div>
+    <div className='p-1 border-l-2 border-border/70'><FaExternalLinkAlt className='text-sm text-color-gray-2 hover:text-base hover:text-color-primary cursor-pointer'/></div>
+    <div className='p-1 border-l-2 border-border/70'><FaTrashAlt className='text-sm text-color-gray-2 hover:text-base hover:text-color-primary cursor-pointer'/></div>
     </div>
     
         </div>

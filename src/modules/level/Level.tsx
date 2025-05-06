@@ -16,13 +16,12 @@ import { Switchsm } from "@/components/ui/switchsm"
 import Select from 'react-tailwindcss-select'
 import { selectStyle } from "@/components/GlobalFunction"
 import { FaArrowLeftLong, FaArrowRightLong, FaX } from "react-icons/fa6"
-import {  ModalEdit } from "./Modal"
-import { Link } from "react-router-dom"
-import { ImportStudent } from "./modal/Import"
-import { ExportStudent } from "./modal/Export"
-import { DeleteStudent } from "./modal/Delete"
 
-const Students = () => {
+import { Link } from "react-router-dom"
+import { ImportStudent } from "../student/modal/Import"
+import { ModalEdit } from "../student/Modal"
+
+const Level = () => {
   const [animal, setAnimal] = useState(null);
 const [Modal, setModal]= useState({
   field:false,
@@ -47,34 +46,31 @@ const handleChange = (value:any) => {
    <Template>
 
 <div className="border-b flex justify-between items-center border-color-border w-full py-2 px-6 bg-white">
-<h2 className="flex  gap-2 items-center font-semibold leading-3"><FaGraduationCap className="text-lg"/> Student</h2>
+<h2 className="flex  gap-2 items-center font-semibold leading-3"><FaGraduationCap className="text-lg"/> Levels</h2>
 
 
 
 <div className="flex gap-1 items-center">
 <ImportStudent />
 
-<ExportStudent/>
+{/* <ExportStudent/> */}
 
-<a href="#" className="text-sm hover:bg-color-primary-light hover:text-color-primary py-3 px-4 rounded-sm cursor-pointer">Batch Operations</a>
+<a href="#" className="text-sm hover:bg-color-primary-light hover:text-color-primary py-3 px-4 rounded-sm cursor-pointer">Export</a>
 
-<DeleteStudent/>
+{/* <DeleteStudent/> */}
 
 
 <a href="#" className="text-sm hover:bg-color-primary-light hover:text-color-primary py-3 px-4 rounded-sm cursor-pointer"><FaShare/></a>
 
 
-<Link to='/student/add' className="rounded-sm   py-2  px-5 bg-color-primary text-white shadow-xs hover:bg-color-primary/80"> Add New Student</Link>
+<Link to='/level/add' className="rounded-sm   py-2  px-5 bg-color-primary text-white shadow-xs hover:bg-color-primary/80"> Add Level</Link>
 </div>
 </div>
 
 <div className="px-6  border-b border-color-border bg-white">
     <ul className="flex items-center gap-4 tab">
         <li className=" active ">Records</li>
-        <li className="   ">Fields</li>
-        <li className="   ">Connections</li>
-        <li className="   ">Rules</li>
-        <li className="   ">Settings</li>
+        <li className="   ">Level</li>
     </ul>
 </div>
 
@@ -130,21 +126,27 @@ const handleChange = (value:any) => {
 
     <li className="flex items-center gap-2 text-color-gray-2 px-4 py-1 hover:hover:bg-gray-300 cursor-pointer text-sm">  <Switchsm id="airplane-mod"  /> Created At  </li>
 
-    <li className="flex items-center gap-2 text-color-gray-2 px-4 py-1 hover:hover:bg-gray-300 cursor-pointer text-sm">  <Switchsm id="airplane-mod"  /> Course Name  </li>
+    <li className="flex items-center gap-2 text-color-gray-2 px-4 py-1 hover:hover:bg-gray-300 cursor-pointer text-sm">  <Switchsm id="airplane-mod"  /> Faculty  </li>
 
+    <li className="flex items-center gap-2 text-color-gray-2 px-4 py-1 hover:hover:bg-gray-300 cursor-pointer text-sm">  <Switchsm id="airplane-mod"  /> Department Name  </li>
 
-    <li className="flex items-center gap-2 text-color-gray-2 px-4 py-1 hover:hover:bg-gray-300 cursor-pointer text-sm">  <Switchsm id="airplane-mod"  /> Course Details  </li>
-    <li className="flex items-center gap-2 text-color-gray-2 px-4 py-1 hover:hover:bg-gray-300 cursor-pointer text-sm">  <Switchsm id="airplane-mod"  /> Student Capacity  </li>
+    <li className="flex items-center gap-2 text-color-gray-2 px-4 py-1 hover:hover:bg-gray-300 cursor-pointer text-sm">  <Switchsm id="airplane-mod"  /> Abbreviation  </li>
+
+    <li className="flex items-center gap-2 text-color-gray-2 px-4 py-1 hover:hover:bg-gray-300 cursor-pointer text-sm">  <Switchsm id="airplane-mod"  /> Default Level  </li>
+
+    <li className="flex items-center gap-2 text-color-gray-2 px-4 py-1 hover:hover:bg-gray-300 cursor-pointer text-sm">  <Switchsm id="airplane-mod"  /> Program Duration  </li>
+
+    <li className="flex items-center gap-2 text-color-gray-2 px-4 py-1 hover:hover:bg-gray-300 cursor-pointer text-sm">  <Switchsm id="airplane-mod"  /> Qualification  </li>
+
+    <li className="flex items-center gap-2 text-color-gray-2 px-4 py-1 hover:hover:bg-gray-300 cursor-pointer text-sm">  <Switchsm id="airplane-mod"  /> Courses  </li>
+    <li className="flex items-center gap-2 text-color-gray-2 px-4 py-1 hover:hover:bg-gray-300 cursor-pointer text-sm">  <Switchsm id="airplane-mod"  /> Current Student  </li>
 
     <li className="flex items-center gap-2 text-color-gray-2 px-4 py-1 hover:bg-gray-300 cursor-pointer text-sm">  <Switchsm id="airplane-mod"  /> Status  </li>
 
    
 
-    <li className="flex items-center gap-2 text-color-gray-2 px-4 py-1 hover:bg-gray-300 cursor-pointer text-sm">  <Switchsm id="airplane-mod"  /> Instructor  </li>
+    <li className="flex items-center gap-2 text-color-gray-2 px-4 py-1 hover:bg-gray-300 cursor-pointer text-sm">  <Switchsm id="airplane-mod"  /> Head of Department  </li>
 
-    <li className="flex items-center gap-2 text-color-gray-2 px-4 py-1 hover:bg-gray-300 cursor-pointer text-sm">  <Switchsm id="airplane-mod"  /> Enrollments  </li>
-
-    <li className="flex items-center gap-2 text-color-gray-2 px-4 py-1 hover:bg-gray-300 cursor-pointer text-sm">  <Switchsm id="airplane-mod"  /> Average Grade  </li>
 
 </ul>
 
@@ -184,175 +186,6 @@ const handleChange = (value:any) => {
 
 </div>
 
-
-<div className="relative group">
-<Button variant={'white'} onClick={()=>setModal({...Modal, filter:!Modal.filter})} size={'md'} className="group  rounded-l-none rounded-r-none ">Filter (6) <FaCaretDown/> </Button>
-
-
-
-<div className={`bg-white border border-color-border  rounded-md shadow-md h-max  mt-2 w-[600px] right-5   py-2 px-4  absolute z-30  max-h-[300px] overflow-scroll  ${Modal.filter?'block':'hidden'} `}>
-
-
-
-
-<div className="flex gap-2 my-1  ">
-
-<Select
-                value={animal}
-                onChange={handleChange}
-                options={options}
-                primaryColor={"indigo"}
-                isSearchable={true}
-                isClearable={true}
-                placeholder="Select any field"
-                classNames={selectStyle}
-            />
-
-<Select
-                value={animal}
-                onChange={handleChange}
-                options={options}
-                primaryColor={"indigo"}
-                isSearchable={true}
-                isClearable={true}
-                placeholder="Select any field"
-                classNames={selectStyle}
-            />
-
-<Select
-                value={animal}
-                onChange={handleChange}
-                options={options}
-                primaryColor={"indigo"}
-                isSearchable={true}
-                isClearable={true}
-                placeholder="Select any field"
-                classNames={selectStyle}
-            />
-
-            <Button variant={'white'} size={'sm'}><Trash/></Button>
-
-</div>
-
-<div className="flex gap-2 my-1  ">
-
-<Select
-                value={animal}
-                onChange={handleChange}
-                options={options}
-                primaryColor={"indigo"}
-                isSearchable={true}
-                isClearable={true}
-                placeholder="Select any field"
-                classNames={selectStyle}
-            />
-
-<Select
-                value={animal}
-                onChange={handleChange}
-                options={options}
-                primaryColor={"indigo"}
-                isSearchable={true}
-                isClearable={true}
-                placeholder="Select any field"
-                classNames={selectStyle}
-            />
-
-<Select
-                value={animal}
-                onChange={handleChange}
-                options={options}
-                primaryColor={"indigo"}
-                isSearchable={true}
-                isClearable={true}
-                placeholder="Select any field"
-                classNames={selectStyle}
-            />
-
-            <Button variant={'white'} size={'sm'}><Trash/></Button>
-
-</div>
-
-
-<div className="flex gap-2 my-1  ">
-
-<Select
-                value={animal}
-                onChange={handleChange}
-                options={options}
-                primaryColor={"indigo"}
-                isSearchable={true}
-                isClearable={true}
-                placeholder="Select any field"
-                classNames={selectStyle}
-            />
-
-<Select
-                value={animal}
-                onChange={handleChange}
-                options={options}
-                primaryColor={"indigo"}
-                isSearchable={true}
-                isClearable={true}
-                placeholder="Select any field"
-                classNames={selectStyle}
-            />
-
-            <Button variant={'white'} size={'sm'}><Trash/></Button>
-
-</div>
-
-
-<div className="flex gap-2 my-1  ">
-
-<Select
-                value={animal}
-                onChange={handleChange}
-                options={options}
-                primaryColor={"indigo"}
-                isSearchable={true}
-                isClearable={true}
-                placeholder="Select any field"
-                classNames={selectStyle}
-            />
-
-
-<Input />
-            <Button variant={'white'} size={'sm'}><Trash/></Button>
-
-</div>
-
-
-<div className="flex gap-2 my-1  ">
-
-<Select
-                value={animal}
-                onChange={handleChange}
-                options={options}
-                primaryColor={"indigo"}
-                isSearchable={true}
-                isClearable={true}
-                placeholder="Select any field"
-                classNames={selectStyle}
-            />
-
-
-
-            <Button variant={'white'} size={'sm'}><Trash/></Button>
-
-</div>
-
-
-
-
-
-<div className="flex items-center justify-between mt-4">
-<a href="#" className="text-sm hover:bg-color-primary-light hover:text-color-primary py-2 px-4 rounded-sm cursor-pointer">Add Filter</a>
-<a href="#" className="text-sm hover:bg-color-primary-light hover:text-color-primary py-2 px-4 rounded-sm cursor-pointer">Apply</a>
-</div>
-</div>
-
-</div>
 
 
 
@@ -585,28 +418,15 @@ const handleChange = (value:any) => {
       <th >SN</th>
       <th>Record ID</th>
       <th>Date Added</th>
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Profile Picture</div></th>
-
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Matric No.</div></th>
-
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Student Name</div></th>
-
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Gender</div></th>   
-      
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Faculty</div></th>
-
-
       <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Department</div></th>
 
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Unit</div></th>
+      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Level</div></th>
 
+      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Staff Adviser</div></th>
 
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Current Level</div></th>
-
-
-      <th>Entry Mode</th>
+      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Current Student</div></th>   
+      
       <th>Status</th>
-      <th >Session</th>
     </tr>
   </thead>
   <tbody>
@@ -630,63 +450,11 @@ const handleChange = (value:any) => {
       <td > <div className="">NSU/NAS/CMP/0035/16/17  <ModalEdit visible={false}  /></div> </td>
       <td ><div className="cell-active ">Adeleke Monsoor Opeyemi  <ModalEdit visible={true} /></div></td>
       <td ><div className=" ">Male  <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">200   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">DE   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" "><div className="p-1 px-2 text-white text-sm bg-[#26C836] rounded-full w-max"> Active </div>   <ModalEdit visible={false} /></div>  </td>
-
-      <td > <div className=" ">2024/2025   <ModalEdit visible={false} /></div></td>
-    </tr>
-
-    <tr className=" group">
-      <td > <div className="flex gap-2 group"><input type="checkbox"  /> 
       
-      <div className=" absolute items-center gap-2 hidden group-hover:flex bg-gray-100 ml-5">
-      <FaExpandAlt  data-tooltip-id="table" data-tooltip-content="Edit Record " className="cursor-pointer text-base text-blue-800" />
-      <FaHistory  data-tooltip-id="table" data-tooltip-content="Record history" className="cursor-pointer text-base text-blue-800" />
-      </div>
-       </div> </td>
-       
-         <td ><div className=" ">1  </div></td>
-      <td ><div className=" ">erfggtt </div></td>
-      <td ><div className=" ">erfggtt </div></td>
-      <td > <div className=" ">22-03-2025  </div></td>
-      <td > <div >NSU/NAS/CMP/0035/16/17  <ModalEdit visible={false}  /></div> </td>
-      <td ><div className=" ">Adeleke Monsoor Opeyemi  <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Male  <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" cell-active">Social Science   <ModalEdit visible={true} /></div></td>
-      <td ><div className=" ">200   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">DE   <ModalEdit visible={false} /></div></td>
       <td ><div className=" "><div className="p-1 px-2 text-white text-sm bg-[#26C836] rounded-full w-max"> Active </div>   <ModalEdit visible={false} /></div>  </td>
 
-      <td > <div className=" ">2024/2025   <ModalEdit visible={false} /></div></td>
     </tr>
-    <tr className=" group">
-      <td > <div className="flex gap-2 group"><input type="checkbox"  /> 
-      <div className=" absolute items-center gap-2 hidden group-hover:flex bg-gray-100 ml-5">
-      <FaExpandAlt  data-tooltip-id="table" data-tooltip-content="Edit Record " className="cursor-pointer text-base text-blue-800" />
-      <FaHistory  data-tooltip-id="table" data-tooltip-content="Record history" className="cursor-pointer text-base text-blue-800" />
-      </div>
-       </div> </td><td ><div className=" ">1  </div></td>
-      <td ><div className=" ">erfggtt </div></td>
-      <td ><div className=" ">erfggtt </div></td>
-      <td > <div className=" ">22-03-2025  </div></td>
-      <td > <div className="cell-active">NSU/NAS/CMP/0035/16/17  <ModalEdit visible={true}  /></div> </td>
-      <td ><div className=" ">Adeleke Monsoor Opeyemi  <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Male  <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">200   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">DE   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" "><div className="p-1 px-2 text-white text-sm bg-[#26C836] rounded-full w-max"> Active </div>   <ModalEdit visible={false} /></div>  </td>
 
-      <td > <div className=" ">2024/2025   <ModalEdit visible={false} /></div></td>
-    </tr>
   </tbody>
 </table>
 
@@ -714,4 +482,4 @@ const handleChange = (value:any) => {
   )
 }
 
-export default Students
+export default Level

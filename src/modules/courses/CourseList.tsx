@@ -16,13 +16,12 @@ import { Switchsm } from "@/components/ui/switchsm"
 import Select from 'react-tailwindcss-select'
 import { selectStyle } from "@/components/GlobalFunction"
 import { FaArrowLeftLong, FaArrowRightLong, FaX } from "react-icons/fa6"
-import {  ModalEdit } from "./Modal"
-import { Link } from "react-router-dom"
-import { ImportStudent } from "./modal/Import"
-import { ExportStudent } from "./modal/Export"
-import { DeleteStudent } from "./modal/Delete"
 
-const Students = () => {
+import { Link } from "react-router-dom"
+import { ImportStudent } from "../student/modal/Import"
+import { ModalEdit } from "../student/Modal"
+
+const CourseList = () => {
   const [animal, setAnimal] = useState(null);
 const [Modal, setModal]= useState({
   field:false,
@@ -44,39 +43,7 @@ const handleChange = (value:any) => {
 
   return (
 
-   <Template>
-
-<div className="border-b flex justify-between items-center border-color-border w-full py-2 px-6 bg-white">
-<h2 className="flex  gap-2 items-center font-semibold leading-3"><FaGraduationCap className="text-lg"/> Student</h2>
-
-
-
-<div className="flex gap-1 items-center">
-<ImportStudent />
-
-<ExportStudent/>
-
-<a href="#" className="text-sm hover:bg-color-primary-light hover:text-color-primary py-3 px-4 rounded-sm cursor-pointer">Batch Operations</a>
-
-<DeleteStudent/>
-
-
-<a href="#" className="text-sm hover:bg-color-primary-light hover:text-color-primary py-3 px-4 rounded-sm cursor-pointer"><FaShare/></a>
-
-
-<Link to='/student/add' className="rounded-sm   py-2  px-5 bg-color-primary text-white shadow-xs hover:bg-color-primary/80"> Add New Student</Link>
-</div>
-</div>
-
-<div className="px-6  border-b border-color-border bg-white">
-    <ul className="flex items-center gap-4 tab">
-        <li className=" active ">Records</li>
-        <li className="   ">Fields</li>
-        <li className="   ">Connections</li>
-        <li className="   ">Rules</li>
-        <li className="   ">Settings</li>
-    </ul>
-</div>
+<>
 
 
 
@@ -88,8 +55,8 @@ const handleChange = (value:any) => {
 
   <div className="px-6 pt-3 rounded-t-md border-b border-color-border bg-white">
     <ul className="flex items-center gap-4 tab">
-        <li className=" active text-base">nesuer</li>
-        <li className="  text-base">nesuer</li>
+        <li className=" active text-base">view 2</li>
+        <li className="  text-base">view 1</li>
     </ul>
 </div>
 
@@ -190,7 +157,7 @@ const handleChange = (value:any) => {
 
 
 
-<div className={`bg-white border border-color-border  rounded-md shadow-md h-max  mt-2 w-[600px] right-5   py-2 px-4  absolute z-30  max-h-[300px] overflow-scroll  ${Modal.filter?'block':'hidden'} `}>
+<div className={`bg-white border border-color-border  rounded-md shadow-md h-max  mt-2 w-[600px] right-5   py-2 px-4  absolute z-30  max-h-[300px]  overflow-scroll ${Modal.filter?'block':'hidden'} `}>
 
 
 
@@ -585,28 +552,30 @@ const handleChange = (value:any) => {
       <th >SN</th>
       <th>Record ID</th>
       <th>Date Added</th>
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Profile Picture</div></th>
+      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Course Title</div></th>
 
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Matric No.</div></th>
-
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Student Name</div></th>
-
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Gender</div></th>   
-      
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Faculty</div></th>
-
+      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Course Code</div></th>
 
       <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Department</div></th>
 
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Unit</div></th>
+      <th>Course Type</th>
+
+      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Level</div></th>   
+      
+      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Semester</div></th>
 
 
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Current Level</div></th>
+      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Pass /Full Mark</div></th>
+
+      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Credit Unit</div></th>
 
 
-      <th>Entry Mode</th>
-      <th>Status</th>
-      <th >Session</th>
+      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Lecturer Incharge</div></th>
+
+
+      <th>Assisting Lecturers</th>
+      
+      <th >Status</th>
     </tr>
   </thead>
   <tbody>
@@ -699,19 +668,9 @@ const handleChange = (value:any) => {
 
 
 
-<div className="flex justify-between items-center bg-white border-t-2 border-t-color-border px-20 py-5 bottom-0 sticky w-full  ">
+</>
 
-    <h2 className="text-base font-medium">Unsaved Changes</h2>
-
-    <div className="flex gap-3">
-    <Button variant={'white'} size='md' className="">Discard</Button>
-
-    <Button variant={'primary'} size='md' className="">Save</Button>
-    </div>
-</div>
-
-</Template>
   )
 }
 
-export default Students
+export default CourseList

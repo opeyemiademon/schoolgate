@@ -57,7 +57,7 @@ const AddStudent = () => {
 <div className='py-5'>
   <div className=" py-2 px-5">
 
-<label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Matriculation Number <span className='text-red-800'>*</span></label>
+<label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Matriculation Number <span className='text-red-800'>*</span></label>
     <Input type="text" disabled className="mt-2" value="FT23POL0123" />
 <span className='text-xs text-muted-foreground'>This is usually auto generated, and it can change at the point of submission if duplicate is detected</span>
 </div>
@@ -68,7 +68,7 @@ const AddStudent = () => {
 
 <div className="grid grid-cols-3 gap-4 mt-2">
   <div className="">
-  <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> First Name</label>
+  <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> First Name</label>
 
   <Input type="text" className="mt-2" />
   </div>
@@ -76,13 +76,13 @@ const AddStudent = () => {
 
 
   <div className="">
-  <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Last Name</label>
+  <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Last Name</label>
 
   <Input type="text" className="mt-2" />
   </div>
 
   <div className="">
-  <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Othername</label>
+  <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Othername</label>
 
   <Input type="text" className="mt-2" />
   </div>
@@ -98,7 +98,7 @@ const AddStudent = () => {
 
 <div className=" py-2 px-5">
 
-<label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Gender <span className='text-red-800'>*</span></label>
+<label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Gender <span className='text-red-800'>*</span></label>
 
 
 <div className="flex gap-10 mt-2">
@@ -116,7 +116,7 @@ const AddStudent = () => {
     
 <div className=" py-2 px-5">
 
-<label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Email Address <span className='text-red-800'>*</span></label>
+<label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Email Address <span className='text-red-800'>*</span></label>
     <Input type="text" className="mt-2" />
     <span className='text-xs text-color-gray-2'>Must be unique and be the one student have access to</span>
 </div>
@@ -124,7 +124,7 @@ const AddStudent = () => {
 
 <div className=" py-2 px-5">
 
-<label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Telephone <span className='text-red-800'>*</span></label>
+<label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Telephone <span className='text-red-800'>*</span></label>
     <Input type="text" className="mt-2" />
 
 </div>
@@ -133,7 +133,7 @@ const AddStudent = () => {
 
 <div className=" py-2 px-5">
 
-<label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Select Faculty <span className='text-red-800'>*</span></label>
+<label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Select Faculty <span className='text-red-800'>*</span></label>
 <Select
                 value={animal}
                 onChange={handleChange}
@@ -148,7 +148,7 @@ const AddStudent = () => {
 
 <div className=" py-2 px-5">
 
-<label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Select Department <span className='text-red-800'>*</span></label>
+<label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Select Department <span className='text-red-800'>*</span></label>
 <Select
                 value={animal}
                 onChange={handleChange}
@@ -164,7 +164,7 @@ const AddStudent = () => {
 
 <div className=" py-2 px-5">
 
-<label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Select Unit <span className='text-red-800'>*</span></label>
+<label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Select Unit <span className='text-red-800'>*</span></label>
 <Select
                 value={animal}
                 onChange={handleChange}
@@ -181,7 +181,7 @@ const AddStudent = () => {
 
 <div className=" py-2 px-5">
 
-<label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Status <span className='text-red-800'>*</span></label>
+<label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Status <span className='text-red-800'>*</span></label>
 <Select
                 value={animal}
                 onChange={handleChange}
@@ -197,7 +197,7 @@ const AddStudent = () => {
   
 <div className=" py-2 px-5">
 
-<label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Profile Picture <span className='text-red-800'>*</span></label>
+<label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Profile Picture <span className='text-red-800'>*</span></label>
     
     <div className='border-2 rounded-sm border-border/70 items-center justify-center h-36 flex  cursor-pointer hover:border-border group'>
 
@@ -216,7 +216,7 @@ const AddStudent = () => {
 
 <div className="flex justify-between items-center bg-white border-t-2 border-t-color-border px-20 py-5 bottom-0 sticky w-full  ">
 
-    <h2 className="text-base font-medium">Unsaved Changes</h2>
+    <h2 className="text-sm font-medium">Unsaved Changes</h2>
 
     <div className="flex gap-3">
     <Button variant={'white'} size='md' className="">Discard</Button>

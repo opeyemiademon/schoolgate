@@ -1,6 +1,6 @@
 export const selectStyle = {
     menuButton: ({ isDisabled }:any) => (
-        `flex text-sm text-gray-500 px-2   justify-between border border-gray-300 rounded shadow-sm transition-all duration-300 focus:outline-none ${
+        `flex text-sm text-gray-500 px-2  mt-2 justify-between border border-gray-300 rounded shadow-sm transition-all duration-300 focus:outline-none ${
             isDisabled
                 ? "bg-gray-200"
                 : "bg-white hover:border-gray-400 focus:border-blue-500 focus:ring focus:ring-blue-500/20"

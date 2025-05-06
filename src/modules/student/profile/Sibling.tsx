@@ -34,7 +34,7 @@ const Sibling = () => {
     </div>
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Enter Matric Number <span className='text-red-800'>*</span></label>
+    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Enter Matric Number <span className='text-red-800'>*</span></label>
         <Input type="text"  className="mt-2" value="" />
         <span className='text-xs text-color-gray-2'>An invitation will be sent to the student, once accepted, such student will appear as sibling </span>
     </div>
@@ -114,7 +114,7 @@ const Sibling = () => {
           <div className=" absolute items-center gap-2 hidden group-hover:flex bg-gray-100 ml-5">
     
             <Link to='/student/edit/8'>
-          <FaTrashAlt  data-tooltip-id="table" data-tooltip-content="Edit Record " className="cursor-pointer text-base text-blue-800" />
+          <FaTrashAlt  data-tooltip-id="table" data-tooltip-content="Edit Record " className="cursor-pointer text-sm text-blue-800" />
           </Link>
     
           </div>
@@ -138,7 +138,7 @@ const Sibling = () => {
           <div className=" absolute items-center gap-2 hidden group-hover:flex bg-gray-100 ml-5">
     
             <Link to='/student/edit/8'>
-          <FaTrashAlt  data-tooltip-id="table" data-tooltip-content="Edit Record " className="cursor-pointer text-base text-blue-800" />
+          <FaTrashAlt  data-tooltip-id="table" data-tooltip-content="Edit Record " className="cursor-pointer text-sm text-blue-800" />
           </Link>
     
           </div>
@@ -160,7 +160,7 @@ const Sibling = () => {
           <div className=" absolute items-center gap-2 hidden group-hover:flex bg-gray-100 ml-5">
     
             <Link to='/student/edit/8'>
-          <FaTrashAlt  data-tooltip-id="table" data-tooltip-content="Edit Record " className="cursor-pointer text-base text-blue-800" />
+          <FaTrashAlt  data-tooltip-id="table" data-tooltip-content="Edit Record " className="cursor-pointer text-sm text-blue-800" />
           </Link>
     
           </div>

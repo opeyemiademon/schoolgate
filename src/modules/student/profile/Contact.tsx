@@ -25,7 +25,7 @@ const Contact = () => {
     
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Contact Address <span className='text-red-800'>*</span></label>
+    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Contact Address <span className='text-red-800'>*</span></label>
       <Input type="text" className="mt-2" />
     <span className='text-xs text-color-gray-2'>Surname first, follow by First Name then Other name</span>
     </div>
@@ -33,7 +33,7 @@ const Contact = () => {
     
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Permanent Home Address <span className='text-red-800'>*</span></label>
+    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Permanent Home Address <span className='text-red-800'>*</span></label>
       <Input type="text" className="mt-2" />
     <span className='text-xs text-color-gray-2'>Surname first, follow by First Name then Other name</span>
     </div>
@@ -43,7 +43,7 @@ const Contact = () => {
     
     <div className="grid grid-cols-2 gap-4">
       <div className="">
-      <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Mobile</label>
+      <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Mobile</label>
     
       <Input type="text" className="mt-2" />
       </div>
@@ -51,7 +51,7 @@ const Contact = () => {
     
     
       <div className="">
-      <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Alternate Mobile</label>
+      <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Alternate Mobile</label>
     
       <Input type="text" className="mt-2" />
       </div>
@@ -64,7 +64,7 @@ const Contact = () => {
     
     <div className="grid grid-cols-2 gap-4">
       <div className="">
-      <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> School Email Address</label>
+      <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> School Email Address</label>
     
       <Input type="text" className="mt-2" />
       </div>
@@ -72,7 +72,7 @@ const Contact = () => {
     
     
       <div className="">
-      <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Personal Email Address</label>
+      <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Personal Email Address</label>
     
       <Input type="text" className="mt-2" />
       </div>
@@ -87,7 +87,7 @@ const Contact = () => {
     
     <div className="grid grid-cols-3 gap-4">
       <div className="">
-      <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Nationality</label>
+      <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Nationality</label>
     
       <Input type="text" className="mt-2" />
       </div>
@@ -95,13 +95,13 @@ const Contact = () => {
     
     
       <div className="">
-      <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> State of Origin</label>
+      <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> State of Origin</label>
     
       <Input type="text" className="mt-2" />
       </div>
     
       <div className="">
-      <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Local Government Area</label>
+      <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Local Government Area</label>
     
       <Input type="text" className="mt-2" />
       </div>
@@ -115,7 +115,7 @@ const Contact = () => {
     
     <div className="grid grid-cols-2 gap-4">
       <div className="">
-      <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Place of Birth</label>
+      <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Place of Birth</label>
     
       <Input type="text" className="mt-2" />
       </div>
@@ -123,7 +123,7 @@ const Contact = () => {
     
     
       <div className="">
-      <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> City</label>
+      <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> City</label>
     
       <Input type="text" className="mt-2" />
       </div>
@@ -133,7 +133,7 @@ const Contact = () => {
     
       <div className=" py-2 px-5">
         
-        <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Other Info </label>
+        <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Other Info </label>
             <Textarea className='mt-2' />
     
         <span className='text-xs text-color-gray-2'>Surname first, follow by First Name then Other name</span>

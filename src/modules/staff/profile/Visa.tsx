@@ -16,101 +16,56 @@ import { RadioItem } from '@/components/RadioGroup'
 import { selectStyle } from '@/components/GlobalFunction'
 import Select from 'react-tailwindcss-select'
 import { ModalEdit } from '../Modal'
+import { EmergencyModal } from '../modal/Emergency'
+import { VisaModal } from '../modal/Visa'
 
-const File = () => {
+const Visa = () => {
   return (
     <div >
-    <h2 className="text-xl my-2">Student Files</h2>
+  
+    
     <Card className="p-0">
     <CardContent className="p-0">
-    
-    
-     
-    
-    <div className="grid grid-cols-3 gap-4">
-    
-    <div className=" py-2 px-5">
-    
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Select Document <span className='text-red-800'>*</span></label>
-        <Input type="text"  className="mt-2" value="" />
-    
-    </div>
-    
-    
-    <div className=" py-2 px-5">
-    
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> File Title <span className='text-red-800'>*</span></label>
-        <Input type="text"  className="mt-2" value="" />
-    
-    </div>
-    
-    
-    
-    <div className=" py-2 px-5 flex flex-col mt-2">
-    
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Choose File  <span className='text-red-800'>*</span></label>
-    
-    <div className='mt-5'>
-    <Button variant={'white'} size={'lg'} className='w-full'>Browse</Button>
-    </div>
-    </div>
-    
-    
-    </div>
-    
-    
-    
-    
-    
-    <div className=" py-2 px-5">
-    
-    <Button variant={'primary'} size={'sm'}><FaUpload/> Upload</Button>
-    </div>
-    
-    
-    
-    </CardContent>
-    </Card>
-    
-    <hr className="mt-5 text-color-border " />
-    
-    <h2 className="text-xl my-2">Files Uploaded</h2>
-    <Card className="p-0">
-    <CardContent className="p-0">
-    
+    <div className='bg-color-primary-light  text-color-primary shadow shadow-gray-100 rounded-t-md p-4 flex gap-2'>
+ 
+ <h5 className='text-base font-semibold leading-4'>Passport, Visa & Licenses</h5>
+
+</div>
     
      
     
     
     
-    <div className="m-2">
+    <div className="m-2 flex justify-between">
     
     
     <div className="flex flex-row">
-    <Button variant={'white'} size={'md'} className=" border-l-none rounded-r-none">    <input type="checkbox"  />  2 Selected</Button>
+    <Button variant={'white'} size={'sm'} className=" border-l-none rounded-r-none">    <input type="checkbox"  />  2 Selected</Button>
     
-    <Button variant={'white'} size={'md'} className=" rounded-none">Update</Button>
+    <Button variant={'white'} size={'sm'} className=" rounded-none">Update</Button>
     
-    <Button variant={'white'} size={'md'} className=" border-r-none rounded-l-none">Delete</Button>
+    <Button variant={'white'} size={'sm'} className=" border-r-none rounded-l-none">Delete</Button>
+    
+    </div>
+    <VisaModal/>
     </div>
     
-    </div>
-    
-    <div className='my-4'> 
-    <table className="custom-table  w-full  rounded-md  ">
+    <div className=" my-4 overflow-scroll max-w-[calc(100vw-370px)]">
+
+    <table className="custom-table  w-max  rounded-md  ">
       <thead>
         <tr>
           <th>#</th>
           <th >SN</th>
-          <th>Record ID</th>
-          <th>Date Added</th>
-          <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Document</div></th>
+          <th>Document</th>
+          <th>Authority</th>
+          <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Issue Date</div></th>
     
-          <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/>Title</div></th>
+          <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/>Expiry Date</div></th>
     
-          <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Preview</div></th>
+          <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Renew Date</div></th>
       
-          
+          <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Issuing Country</div></th>
     
         </tr>
       </thead>
@@ -121,7 +76,7 @@ const File = () => {
           <div className=" absolute items-center gap-2 hidden group-hover:flex bg-gray-100 ml-5">
     
             <Link to='/student/edit/8'>
-          <FaTrashAlt  data-tooltip-id="table" data-tooltip-content="Edit Record " className="cursor-pointer text-sm text-blue-800" />
+          <FaTrashAlt  data-tooltip-id="table" data-tooltip-content="Edit Record " className="cursor-pointer text-base text-blue-800" />
           </Link>
     
           </div>
@@ -133,7 +88,7 @@ const File = () => {
           <td ><div className="cell-active ">Adeleke Monsoor Opeyemi  <ModalEdit visible={true} /></div></td>
           <td ><div className=" ">Male  <ModalEdit visible={false} /></div></td>
     
-    
+          <td ><div className=" ">Male  <ModalEdit visible={false} /></div></td>
     
           
         </tr>
@@ -144,7 +99,7 @@ const File = () => {
           <div className=" absolute items-center gap-2 hidden group-hover:flex bg-gray-100 ml-5">
     
             <Link to='/student/edit/8'>
-          <FaTrashAlt  data-tooltip-id="table" data-tooltip-content="Edit Record " className="cursor-pointer text-sm text-blue-800" />
+          <FaTrashAlt  data-tooltip-id="table" data-tooltip-content="Edit Record " className="cursor-pointer text-base text-blue-800" />
           </Link>
     
           </div>
@@ -155,9 +110,7 @@ const File = () => {
           <td > <div className="">NSU/NAS/CMP/0035/16/17  <ModalEdit visible={false}  /></div> </td>
           <td ><div className="cell-active ">Adeleke Monsoor Opeyemi  <ModalEdit visible={true} /></div></td>
           <td ><div className=" ">Male  <ModalEdit visible={false} /></div></td>
-    
-    
-    
+          <td ><div className=" ">erfggtt </div></td>
           
         </tr>
        
@@ -175,4 +128,4 @@ const File = () => {
   )
 }
 
-export default File
+export default Visa

@@ -31,7 +31,7 @@ const Qualification = () => {
     
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Name of Institution <span className='text-red-800'>*</span></label>
+    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Name of Institution <span className='text-red-800'>*</span></label>
         <Input type="text"  className="mt-2" value="" />
     
     </div>
@@ -39,7 +39,7 @@ const Qualification = () => {
     
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Program <span className='text-red-800'>*</span></label>
+    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Program <span className='text-red-800'>*</span></label>
         <Input type="text"  className="mt-2" value="" />
     
     </div>
@@ -57,14 +57,14 @@ const Qualification = () => {
     
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Grade/Award <span className='text-red-800'>*</span></label>
+    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Grade/Award <span className='text-red-800'>*</span></label>
         <Input type="text"  className="mt-2" value="" />
     
     </div>
     
     <div className=" py-2 px-5">
     
-    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Month and Year of Graduation <span className='text-red-800'>*</span></label>
+    <label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Month and Year of Graduation <span className='text-red-800'>*</span></label>
         <Input type="text"  className="mt-2" value="" />
     
     </div>
@@ -133,7 +133,7 @@ const Qualification = () => {
           <div className=" absolute items-center gap-2 hidden group-hover:flex bg-gray-100 ml-5">
     
             <Link to='/student/edit/8'>
-          <FaTrashAlt  data-tooltip-id="table" data-tooltip-content="Edit Record " className="cursor-pointer text-sm text-blue-800" />
+          <FaTrashAlt  data-tooltip-id="table" data-tooltip-content="Edit Record " className="cursor-pointer text-base text-blue-800" />
           </Link>
     
           </div>
@@ -157,7 +157,7 @@ const Qualification = () => {
           <div className=" absolute items-center gap-2 hidden group-hover:flex bg-gray-100 ml-5">
     
             <Link to='/student/edit/8'>
-          <FaTrashAlt  data-tooltip-id="table" data-tooltip-content="Edit Record " className="cursor-pointer text-sm text-blue-800" />
+          <FaTrashAlt  data-tooltip-id="table" data-tooltip-content="Edit Record " className="cursor-pointer text-base text-blue-800" />
           </Link>
     
           </div>
@@ -180,7 +180,7 @@ const Qualification = () => {
           <div className=" absolute items-center gap-2 hidden group-hover:flex bg-gray-100 ml-5">
     
             <Link to='/student/edit/8'>
-          <FaTrashAlt  data-tooltip-id="table" data-tooltip-content="Edit Record " className="cursor-pointer text-sm text-blue-800" />
+          <FaTrashAlt  data-tooltip-id="table" data-tooltip-content="Edit Record " className="cursor-pointer text-base text-blue-800" />
           </Link>
     
           </div>

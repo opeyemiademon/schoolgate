@@ -16,7 +16,7 @@ import Select from 'react-tailwindcss-select'
 import { selectStyle } from '@/components/GlobalFunction'
 import RadioGroup, { RadioItem } from '@/components/RadioGroup'
 
-const AddFaculty = () => {
+const AddLevel = () => {
 
 
     const [animal, setAnimal] = useState(null);
@@ -41,49 +41,60 @@ const AddFaculty = () => {
 
     <div className='flex items-center gap-5 '>
 
-    <Link to='/faculty' className=' border-r border-color-border cursor-pointer flex items-center py-4 px-4 hover:bg-gray-100'><FaChevronLeft className='text-color-primary' /> </Link>
+    <Link to='/levels' className=' border-r border-color-border cursor-pointer flex items-center py-4 px-4 hover:bg-gray-100'><FaChevronLeft className='text-color-primary' /> </Link>
 
-<h2 className="flex  gap-2 items-center font-semibold leading-3"><FaPlus/> Add New Faculty</h2>
+<h2 className="flex  gap-2 items-center font-semibold leading-3"><FaPlus/> Add New Level</h2>
 </div>
 
-<Switch id="airplane-mod" className='' /> 
+<Switch id="airplane-mod" className='' checked={true} /> 
 </div>
 
 
 <div className="px-14 py-4">
 
 <Card className="p-0">
-  <CardContent className="p-0 py-5">
+  <CardContent className="px-0 py-5">
     
+
+
+  <div className=" py-2 px-5">
+
+<label htmlFor="" className="form-title text-base leading-1 text-color-gray-2  "> Department <span className='text-red-800'>*</span></label>
+<Select
+                value={animal}
+                onChange={handleChange}
+                options={options}
+                primaryColor={"indigo"}
+                isSearchable={true}
+                isClearable={true}
+                placeholder="Select "
+                classNames={selectStyle}
+            />
+</div>
+
     <div className="py-2 px-5">
 
-    <label htmlFor="" className=" text-sm leading-1 text-color-gray-2 "> Faculty Name <span className='text-red-800'>*</span></label>
+    <label htmlFor="" className=" text-sm leading-1 text-color-gray-2 "> New Level Name <span className='text-red-800'>*</span></label>
         <Input type="text" className="mt-2" />
 
     </div>
 
+
     <div className="py-2 px-5">
-        <label htmlFor="" className=" text-sm leading-1 text-color-gray-2 "> Abbreviation</label>
+        <label htmlFor="" className=" text-sm leading-1 text-color-gray-2 "> Existing Levels</label>
 
-        <Input type="text" className="mt-2"  />
-
-    </div>
-
-<div className="py-2 px-5 grid grid-cols-2 gap-3">
-   
-
-
-    <div className="">
-        <label htmlFor="" className=" text-sm leading-1 text-color-gray-2 "> Administrative Head Staff Title <span className='text-red-800'>*</span></label>
-
-        <Input type="text" className="mt-2" value={"Dean"} />
+        <Input type="text" className="mt-2" />
+        <span className='text-sm text-gray-400 italic'>List all existing level here</span>
 
     </div>
-    
-    
-    <div className=" ">
 
-<label htmlFor="" className="form-title text-base leading-1 text-color-gray-2  "> Administrative Head <span className='text-red-800'>*</span></label>
+  
+
+
+
+    <div className=" py-2 px-5">
+
+<label htmlFor="" className="form-title text-base leading-1 text-color-gray-2  "> Staff Adviser <span className='text-red-800'>*</span></label>
 <Select
                 value={animal}
                 onChange={handleChange}
@@ -95,7 +106,9 @@ const AddFaculty = () => {
                 classNames={selectStyle}
             />
 </div>
-</div>
+
+
+
   </CardContent>
 </Card>
 <hr className="mt-5 text-color-border " />
@@ -115,4 +128,4 @@ const AddFaculty = () => {
   )
 }
 
-export default AddFaculty
+export default AddLevel

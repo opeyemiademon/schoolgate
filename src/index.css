@@ -161,7 +161,7 @@
   }
 
   .tab>li{
-    @apply text-sm px-3 py-2  cursor-pointer;
+    @apply text-sm px-3 py-2  cursor-pointer text-nowrap;
 
   }
 
@@ -180,7 +180,28 @@
 
   }
 
-  
+.stepper{
+  @apply mx-3 my-5 ;
+}
+
+.stepper>li:first-child{
+  @apply rounded-t-sm border-t;
+}
+.stepper>li:last-child{
+  @apply rounded-b-sm;
+}
+
+.stepper>li.active{
+  @apply bg-color-primary text-white border-color-primary;
+}
+
+li:not(.active):hover{
+@apply bg-color-primary-light;
+} 
+.stepper>li{
+  @apply p-3 border border-gray-300 border-t-0 cursor-pointer text-sm text-color-gray-2  transition-all delay-75 ;
+}
+
 .form-group-wrapper{
   @apply flex w-full;
 }

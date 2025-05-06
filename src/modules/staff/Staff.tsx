@@ -10,7 +10,7 @@ import {
 import { Button } from "@/components/ui/button"
 import Topbar from "@/Layout/Topbar"
 import Sidebar from "@/Layout/Sidebar"
-import Template from "@/Layout/Template"
+import Template from "./Layout/Template"
 import { RefreshCcw, Search, Trash, X } from "lucide-react"
 import { Switchsm } from "@/components/ui/switchsm"
 import Select from 'react-tailwindcss-select'
@@ -18,11 +18,11 @@ import { selectStyle } from "@/components/GlobalFunction"
 import { FaArrowLeftLong, FaArrowRightLong, FaX } from "react-icons/fa6"
 import {  ModalEdit } from "./Modal"
 import { Link } from "react-router-dom"
-import { ImportStudent } from "./modal/Import"
-import { ExportStudent } from "./modal/Export"
-import { DeleteStudent } from "./modal/Delete"
+import { ImportStaff } from "./modal/Import"
+import { ExportStaff } from "./modal/Export"
+import { DeleteStaff } from "./modal/Delete"
 
-const Students = () => {
+const Staff = () => {
   const [animal, setAnimal] = useState(null);
 const [Modal, setModal]= useState({
   field:false,
@@ -47,31 +47,31 @@ const handleChange = (value:any) => {
    <Template>
 
 <div className="border-b flex justify-between items-center border-color-border w-full py-2 px-6 bg-white">
-<h2 className="flex  gap-2 items-center font-semibold leading-3"><FaGraduationCap className="text-lg"/> Student</h2>
+<h2 className="flex  gap-2 items-center font-semibold leading-3"><FaGraduationCap className="text-lg"/> Staff</h2>
 
 
 
 <div className="flex gap-1 items-center">
-<ImportStudent />
+<ImportStaff />
 
-<ExportStudent/>
+<ExportStaff/>
 
 <a href="#" className="text-sm hover:bg-color-primary-light hover:text-color-primary py-3 px-4 rounded-sm cursor-pointer">Batch Operations</a>
 
-<DeleteStudent/>
+<DeleteStaff/>
 
 
 <a href="#" className="text-sm hover:bg-color-primary-light hover:text-color-primary py-3 px-4 rounded-sm cursor-pointer"><FaShare/></a>
 
 
-<Link to='/student/add' className="rounded-sm   py-2  px-5 bg-color-primary text-white shadow-xs hover:bg-color-primary/80"> Add New Student</Link>
+<Link to='/staff/add' className="rounded-sm   py-2  px-5 bg-color-primary text-white shadow-xs hover:bg-color-primary/80"> Add New Staff</Link>
 </div>
 </div>
 
 <div className="px-6  border-b border-color-border bg-white">
     <ul className="flex items-center gap-4 tab">
-        <li className=" active ">Records</li>
-        <li className="   ">Fields</li>
+        <li className=" active ">Academic</li>
+        <li className="   ">Non Academic</li>
         <li className="   ">Connections</li>
         <li className="   ">Rules</li>
         <li className="   ">Settings</li>
@@ -134,7 +134,7 @@ const handleChange = (value:any) => {
 
 
     <li className="flex items-center gap-2 text-color-gray-2 px-4 py-1 hover:hover:bg-gray-300 cursor-pointer text-sm">  <Switchsm id="airplane-mod"  /> Course Details  </li>
-    <li className="flex items-center gap-2 text-color-gray-2 px-4 py-1 hover:hover:bg-gray-300 cursor-pointer text-sm">  <Switchsm id="airplane-mod"  /> Student Capacity  </li>
+    <li className="flex items-center gap-2 text-color-gray-2 px-4 py-1 hover:hover:bg-gray-300 cursor-pointer text-sm">  <Switchsm id="airplane-mod"  /> Staff Capacity  </li>
 
     <li className="flex items-center gap-2 text-color-gray-2 px-4 py-1 hover:bg-gray-300 cursor-pointer text-sm">  <Switchsm id="airplane-mod"  /> Status  </li>
 
@@ -374,7 +374,7 @@ const handleChange = (value:any) => {
     <a href="#" className="text-sm hover:bg-color-primary-light hover:text-color-primary p-2 rounded-sm cursor-pointer flex items-center gap-2"><FaX className="font-semibold text-color-gray-2"/> </a>
     <span className="text-sm text-color-gray-2">then by</span>
     <select className="text-sm hover:bg-color-primary-light hover:text-color-primary py-2 px-4 rounded-sm text-color-gray-2 cursor-pointer flex items-center">
-    <option value="">Student Capacity</option>
+    <option value="">Staff Capacity</option>
       <option value="">Auto Increment</option>
       <option value="">Course Name</option>
       <option value="">Course Details</option>
@@ -528,7 +528,7 @@ const handleChange = (value:any) => {
   </div>
 
   <div className="flex items-center border border-color-border rounded  w-max">
-<span className="text-sm ml-2 text-color-gray-2">Student Capacity sort by descending </span>
+<span className="text-sm ml-2 text-color-gray-2">Staff Capacity sort by descending </span>
   <a href="#" className="text-sm hover:bg-color-primary-light hover:text-color-primary p-2 rounded-sm cursor-pointer flex items-center gap-2"><FaX className="font-semibold text-color-gray-2"/> </a>
   </div>
 
@@ -585,28 +585,21 @@ const handleChange = (value:any) => {
       <th >SN</th>
       <th>Record ID</th>
       <th>Date Added</th>
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Profile Picture</div></th>
+      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Name</div></th>
 
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Matric No.</div></th>
+      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Designation</div></th>
 
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Student Name</div></th>
+      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Phone</div></th>
 
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Gender</div></th>   
+      <th>Course(s)</th>
+
+      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Staff Adviser</div></th>   
       
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Faculty</div></th>
+      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/>Profile</div></th>
 
 
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Department</div></th>
-
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Unit</div></th>
-
-
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Current Level</div></th>
-
-
-      <th>Entry Mode</th>
-      <th>Status</th>
-      <th >Session</th>
+      
+      <th >Status</th>
     </tr>
   </thead>
   <tbody>
@@ -630,66 +623,16 @@ const handleChange = (value:any) => {
       <td > <div className="">NSU/NAS/CMP/0035/16/17  <ModalEdit visible={false}  /></div> </td>
       <td ><div className="cell-active ">Adeleke Monsoor Opeyemi  <ModalEdit visible={true} /></div></td>
       <td ><div className=" ">Male  <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">200   <ModalEdit visible={false} /></div></td>
+  
       <td ><div className=" ">DE   <ModalEdit visible={false} /></div></td>
       <td ><div className=" "><div className="p-1 px-2 text-white text-sm bg-[#26C836] rounded-full w-max"> Active </div>   <ModalEdit visible={false} /></div>  </td>
 
       <td > <div className=" ">2024/2025   <ModalEdit visible={false} /></div></td>
     </tr>
 
-    <tr className=" group">
-      <td > <div className="flex gap-2 group"><input type="checkbox"  /> 
-      
-      <div className=" absolute items-center gap-2 hidden group-hover:flex bg-gray-100 ml-5">
-      <FaExpandAlt  data-tooltip-id="table" data-tooltip-content="Edit Record " className="cursor-pointer text-base text-blue-800" />
-      <FaHistory  data-tooltip-id="table" data-tooltip-content="Record history" className="cursor-pointer text-base text-blue-800" />
-      </div>
-       </div> </td>
-       
-         <td ><div className=" ">1  </div></td>
-      <td ><div className=" ">erfggtt </div></td>
-      <td ><div className=" ">erfggtt </div></td>
-      <td > <div className=" ">22-03-2025  </div></td>
-      <td > <div >NSU/NAS/CMP/0035/16/17  <ModalEdit visible={false}  /></div> </td>
-      <td ><div className=" ">Adeleke Monsoor Opeyemi  <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Male  <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" cell-active">Social Science   <ModalEdit visible={true} /></div></td>
-      <td ><div className=" ">200   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">DE   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" "><div className="p-1 px-2 text-white text-sm bg-[#26C836] rounded-full w-max"> Active </div>   <ModalEdit visible={false} /></div>  </td>
-
-      <td > <div className=" ">2024/2025   <ModalEdit visible={false} /></div></td>
-    </tr>
-    <tr className=" group">
-      <td > <div className="flex gap-2 group"><input type="checkbox"  /> 
-      <div className=" absolute items-center gap-2 hidden group-hover:flex bg-gray-100 ml-5">
-      <FaExpandAlt  data-tooltip-id="table" data-tooltip-content="Edit Record " className="cursor-pointer text-base text-blue-800" />
-      <FaHistory  data-tooltip-id="table" data-tooltip-content="Record history" className="cursor-pointer text-base text-blue-800" />
-      </div>
-       </div> </td><td ><div className=" ">1  </div></td>
-      <td ><div className=" ">erfggtt </div></td>
-      <td ><div className=" ">erfggtt </div></td>
-      <td > <div className=" ">22-03-2025  </div></td>
-      <td > <div className="cell-active">NSU/NAS/CMP/0035/16/17  <ModalEdit visible={true}  /></div> </td>
-      <td ><div className=" ">Adeleke Monsoor Opeyemi  <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Male  <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">200   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">DE   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" "><div className="p-1 px-2 text-white text-sm bg-[#26C836] rounded-full w-max"> Active </div>   <ModalEdit visible={false} /></div>  </td>
-
-      <td > <div className=" ">2024/2025   <ModalEdit visible={false} /></div></td>
-    </tr>
+  
   </tbody>
 </table>
-
 </div>
   </CardContent>
 </Card>
@@ -714,4 +657,4 @@ const handleChange = (value:any) => {
   )
 }
 
-export default Students
+export default Staff
