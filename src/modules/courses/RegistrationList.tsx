@@ -24,8 +24,10 @@ import CourseList from "./CourseList"
 import Lecturers from "./Lecturers"
 import CourseType from "./CourseType"
 import CourseSettings from "./Settings"
+import AwaitingApproval from "./Awaiting"
+import Approved from "./Approved"
 
-const Courses = () => {
+const RegistrationList = () => {
   const [step, setStep] = useState(1);
   const [animal, setAnimal] = useState(null);
 const [Modal, setModal]= useState({
@@ -74,39 +76,27 @@ const handleChange = (value:any) => {
 
 <div className="px-6  border-b border-color-border bg-white">
     <ul className="flex items-center gap-4 tab">
-        <li className={step===1?"active":""} onClick={()=>setStep(1)}>Records</li>
-        <li className={step===2?"active":""} onClick={()=>setStep(2)}>Course Lecturers</li>
-        <li className={step===3?"active":""} onClick={()=>setStep(3)}>Course Type</li>
-        <li className={step===4?"active":""}>Settings</li>
-        <li className={step===5?"active":""}>Settings</li>
+        <li className={step===1?"active":""} onClick={()=>setStep(1)}>Course Registration</li>
+        <li className={step===2?"active":""} onClick={()=>setStep(2)}>Awaiting Approval</li>
+        <li className={step===3?"active":""} onClick={()=>setStep(3)}>Course Registration Settings</li>
     </ul>
 </div>
 
 
 
-{step===1?<CourseList />:
+{step===1?<Approved />:
 step===2?
-<Lecturers/>:
+<AwaitingApproval/>:
 step===3?
-<CourseType />:
+<CourseSettings />:
 <CourseSettings />
 }
 
 
 
-<div className="flex justify-between items-center bg-white border-t-2 border-t-color-border px-20 py-5 bottom-0 sticky w-full  ">
-
-    <h2 className="text-base font-medium">Unsaved Changes</h2>
-
-    <div className="flex gap-3">
-    <Button variant={'white'} size='md' className="">Discard</Button>
-
-    <Button variant={'primary'} size='md' className="">Save</Button>
-    </div>
-</div>
 
 </Template>
   )
 }
 
-export default Courses
+export default RegistrationList

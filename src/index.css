@@ -27,7 +27,7 @@
   --color-success-light:#64BD63;
   --color-color-border:#D8D9DA;
   --color-color-dark:#1E1E1E;
-  
+  --color-color-blue:#0056b3;
 }
 
 :root {
@@ -212,6 +212,14 @@ li:not(.active):hover{
 }
 
 
+.custom-table {
+  @apply mx-5;
+}
+
+.custom-table thead>tr {
+  @apply bg-color-primary text-white ;
+}
+
 .custom-table th, td {
   @apply border-b border-color-border text-sm ;
 }
@@ -220,7 +228,7 @@ li:not(.active):hover{
   @apply p-2 ;
 }
 
-.custom-table tr:hover {
+.custom-table tr:not(:first-child):hover {
   @apply bg-gray-100;
 }
 
@@ -238,6 +246,18 @@ li:not(.active):hover{
 
 .custom-shadow-sm {
   @apply    shadow-[0_3px_10px_rgb(0,0,0,0.2)];
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 }
 

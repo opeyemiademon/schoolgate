@@ -20,11 +20,80 @@ import { ModalEdit } from '../Modal'
 const Qualification = () => {
   return (
     <div >
-    <h2 className="text-xl my-2">Educational Qualification</h2>
-    <Card className="p-0">
+<p>Kindly redesign this page to allow for SSCE, BSC, MSC and NYSC</p>
+       <Card className="p-0">
     <CardContent className="p-0">
     
+     <div className='bg-color-primary-light  text-color-primary shadow shadow-gray-100 rounded-t-md p-4 flex  flex-col gap-2'>
+ 
+ <h5 className='text-base font-semibold leading-4'>O Level Details</h5>
+<span className='text-sm italic'>Manage student O-level qualififcation.</span>
+</div>
+     
     
+    <div className="grid grid-cols-2 gap-4">
+    
+    <div className=" py-2 px-5">
+    
+    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Name of Institution <span className='text-red-800'>*</span></label>
+        <Input type="text"  className="mt-2" value="" />
+    
+    </div>
+    
+    
+    <div className=" py-2 px-5">
+    
+    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Program <span className='text-red-800'>*</span></label>
+        <Input type="text"  className="mt-2" value="" />
+    
+    </div>
+    
+    
+    
+    
+    
+    </div>
+    
+    
+    
+    
+    <div className="grid grid-cols-2 gap-4">
+    
+    <div className=" py-2 px-5">
+    
+    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Grade/Award <span className='text-red-800'>*</span></label>
+        <Input type="text"  className="mt-2" value="" />
+    
+    </div>
+    
+    <div className=" py-2 px-5">
+    
+    <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Month and Year of Graduation <span className='text-red-800'>*</span></label>
+        <Input type="text"  className="mt-2" value="" />
+    
+    </div>
+    
+    
+    </div>
+    
+    
+
+    
+    
+    
+    </CardContent>
+    </Card>
+
+
+
+     <Card className="p-0 mt-5">
+    <CardContent className="p-0">
+    
+     <div className='bg-color-primary-light  text-color-primary shadow shadow-gray-100 rounded-t-md p-4 flex  flex-col gap-2'>
+ 
+ <h5 className='text-base font-semibold leading-4'>Educational Qualification</h5>
+<span className='text-sm italic'>Manage student educational qualification for the new academic session.</span>
+</div>
      
     
     <div className="grid grid-cols-2 gap-4">

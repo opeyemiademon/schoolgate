@@ -18,17 +18,18 @@ import Select from 'react-tailwindcss-select'
 import { ModalEdit } from './Modal'
 import Basic from './profile/Basic'
 import Contact from './profile/Contact'
-import Academic from './profile/Academic'
-import Parent from './profile/Parent'
-import Qualification from './profile/Qualification'
-import File from './profile/File'
-import Sibling from './profile/Sibling'
 import Emergency from './profile/Emergency'
 import Family from './profile/Family'
 import Visa from './profile/Visa'
 import Education from './profile/Education'
 import Experience from './profile/Experience'
 import Awards from './profile/Awards'
+import Job from './profile/Job'
+import ReportLine from './profile/ReportLine'
+import Files from './profile/Files'
+import BankDetails from './profile/BankDetails'
+import Password from './profile/Password'
+import Termination from './profile/Termination'
 
 const EditStaff = () => {
 
@@ -38,18 +39,17 @@ const EditStaff = () => {
     "Personal Details",
     "Contact Address",
     "Emergency Contacts",
-    "Family",
+    "Family Contacts",
     "Passport, Visa & Licences",
     "Education History",
     "Work Experience",
     "Membership & Awards",
     "Job Details",
     "Report Line",
-    "Document & Files",
+    "Certificates",
     "Bank Account Details",
     "Photos & Password",
-    "Terminations",
-    "Files"
+    "Terminations"
   ])
 
 
@@ -84,13 +84,6 @@ const EditStaff = () => {
 
  <a href="#" className="text-sm hover:bg-color-primary-light hover:text-color-primary py-3 px-4 rounded-sm cursor-pointer"><RefreshCcw/></a> 
 </div>
-
-{/* <div className="px-6 pt-3  border-b border-color-border bg-white">
-    <ul className="flex items-center gap-4 tab overflow-scroll  ">
-
-      {list.map((item:any, id:number)=><li key={id} onClick={()=>setStep(id+1)} className={step===id+1 ?" active ":' '}>{item}</li>)}
-    </ul>
-</div> */}
 
 
 <div className=' px-14 py-4 gap-5 grid grid-cols-12 '>
@@ -141,9 +134,19 @@ step===6?
 step===7?
 <Experience/>:
 step===8?
-<Awards/>
+<Awards/>:
+step===9?
+<Job/>:
+step===10?
+<ReportLine/>:
+step===11?
+<Files/>:
+step===12?
+<BankDetails/>:
+step===13?
+<Password/>
 :
-<File/>
+<Termination/>
 }
 
 

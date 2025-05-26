@@ -6,7 +6,7 @@ import {
     Card,
     CardContent,
   } from "@/components/ui/card"
-import Template from '@/Layout/Template'
+import Template from './Layout/Template'
 import { FaChevronLeft, FaEdit, FaLink, FaPlus, FaTrashAlt } from 'react-icons/fa'
 import { RefreshCcw } from 'lucide-react'
 import { Link } from 'react-router-dom'
@@ -53,8 +53,12 @@ const AddCourse = () => {
 <div className="px-14 py-4">
 
 <Card className="p-0">
-  <CardContent className="px-0 py-5">
-    
+  <CardContent className="px-0 ">
+    <div className='bg-color-primary-light  text-color-primary shadow shadow-gray-100 rounded-t-md p-4 flex  flex-col gap-2'>
+ 
+ <h5 className='text-base font-semibold leading-4'>Add New Course</h5>
+<span className='text-sm italic'>Manage student parent information for the new academic session.</span>
+</div>
 
 
 <div className="grid grid-cols-2 gap-4 py-2 px-5">

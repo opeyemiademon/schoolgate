@@ -26,10 +26,13 @@ const Academic = () => {
         
   return (
     <div >
-<h2 className="text-xl my-2">Academic Information</h2>
 <Card className="p-0">
 <CardContent className="p-0">
-
+ <div className='bg-color-primary-light  text-color-primary shadow shadow-gray-100 rounded-t-md p-4 flex  flex-col gap-2'>
+ 
+ <h5 className='text-base font-semibold leading-4'>Academic Information</h5>
+<span className='text-sm italic'>Manage student academic information for the new academic session.</span>
+</div>
 
  <div className=" py-2 px-5">
 

@@ -15,7 +15,7 @@ import { FaExpandAlt, FaShare } from "react-icons/fa"
 import { selectStyle } from '@/components/GlobalFunction'
 import Select from 'react-tailwindcss-select'
 
-export const FamilyModal =(props:any)=> {
+export const FilesModal =(props:any)=> {
 
    const [animal, setAnimal] = useState(null);
           const options = [
@@ -33,11 +33,11 @@ export const FamilyModal =(props:any)=> {
     <Dialog>
       <DialogTrigger asChild>
     
-          <Button variant={'white'} size={'sm'} >Add Family</Button>
+          <Button variant={'white'} size={'sm'} >Add File </Button>
       </DialogTrigger>
-      <DialogContent className=" p-0 min-w-[60%]  ">
+      <DialogContent className=" p-0 min-w-[50%]  ">
         <DialogHeader className="p-4 border-b border-color-border">
-          <DialogTitle >Assigned Family</DialogTitle>
+          <DialogTitle >Add Document & File</DialogTitle>
         </DialogHeader>
 
 
@@ -46,8 +46,24 @@ export const FamilyModal =(props:any)=> {
 <div className="grid grid-cols-2 gap-4 mt-2">
 
 
+<div className=" ">
+
+<label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Select Type <span className='text-red-800'>*</span></label>
+<Select
+                value={animal}
+                onChange={handleChange}
+                options={options}
+                primaryColor={"indigo"}
+                isSearchable={true}
+                isClearable={true}
+                placeholder="Select.."
+                classNames={selectStyle}
+            />
+</div>
+
+
 <div className="">
-<label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Fullname </label>
+<label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Title</label>
 
 <Input type="text" className="mt-2" />
 </div>
@@ -55,15 +71,11 @@ export const FamilyModal =(props:any)=> {
 
 
 <div className="">
-<label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Relationship</label>
+<label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Accepts jpg, .png, .gif, .pdf, .xls, .doc up to 1 mb.</label>
 
-<Input type="text" className="mt-2" />
-</div>
-
-<div className="">
-<label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Telephone</label>
-
-<Input type="text" className="mt-2" />
+<div className='mt-2'>
+    <Button variant={'white'} size={'lg'} className='w-full'>Browse</Button>
+    </div>
 </div>
 
 
@@ -82,7 +94,7 @@ export const FamilyModal =(props:any)=> {
          
           <Button variant={'white'} size={'md'} className=" ">Cancel</Button>
 
-          <Button variant={'primary'} size={'md'} className=" ">Save Family</Button>
+          <Button variant={'primary'} size={'md'} className=" ">Save </Button>
         </div>
       </DialogContent>
     </Dialog>

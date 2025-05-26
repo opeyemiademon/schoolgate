@@ -20,10 +20,13 @@ import { ModalEdit } from '../Modal'
 const File = () => {
   return (
     <div >
-    <h2 className="text-xl my-2">Student Files</h2>
     <Card className="p-0">
     <CardContent className="p-0">
-    
+      <div className='bg-color-primary-light  text-color-primary shadow shadow-gray-100 rounded-t-md p-4 flex  flex-col gap-2'>
+ 
+ <h5 className='text-base font-semibold leading-4'>Student Documents</h5>
+<span className='text-sm italic'>Manage student document such as admission letters.</span>
+</div>
     
      
     
@@ -74,7 +77,8 @@ const File = () => {
     
     <hr className="mt-5 text-color-border " />
     
-    <h2 className="text-xl my-2">Files Uploaded</h2>
+
+    <h2 className="text-blue-700 text-xl my-2">Files Uploaded</h2>
     <Card className="p-0">
     <CardContent className="p-0">
     

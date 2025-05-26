@@ -19,8 +19,9 @@ import { ModalEdit } from '../Modal'
 import { EmergencyModal } from '../modal/Emergency'
 import { FamilyModal } from '../modal/Family'
 import { AwardsModal } from '../modal/Awards'
+import { FilesModal } from '../modal/Files'
 
-const Awards = () => {
+const Files = () => {
   return (
     <div >
   
@@ -29,7 +30,7 @@ const Awards = () => {
     <CardContent className="p-0">
     <div className='bg-color-primary-light  text-color-primary shadow shadow-gray-100 rounded-t-md p-4 flex gap-2'>
  
- <h5 className='text-base font-semibold leading-4'> Membership & Awards</h5>
+ <h5 className='text-base font-semibold leading-4'> Document, Files or Certificates</h5>
 
 </div>
     
@@ -46,7 +47,7 @@ const Awards = () => {
     <Button variant={'white'} size={'sm'} className=" border-r-none rounded-l-none">Delete</Button>
     
     </div>
-    <AwardsModal/>
+    <FilesModal/>
     </div>
     
     <div className='my-4'> 
@@ -55,10 +56,9 @@ const Awards = () => {
         <tr>
           <th>#</th>
           <th >SN</th>
-          <th>Type</th>
           <th>Title</th>
     
-          <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/>Year</div></th>
+          <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/>Action</div></th>
     
       
           
@@ -80,7 +80,6 @@ const Awards = () => {
           <td ><div className=" ">1  </div></td>
           <td ><div className=" ">erfggtt </div></td>
           <td ><div className=" ">erfggtt </div></td>
-          <td ><div className="cell-active ">Adeleke Monsoor Opeyemi  <ModalEdit visible={true} /></div></td>
      
         </tr>
     
@@ -97,4 +96,4 @@ const Awards = () => {
   )
 }
 
-export default Awards
+export default Files

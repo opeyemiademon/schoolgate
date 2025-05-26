@@ -19,19 +19,18 @@ import Select from 'react-tailwindcss-select'
 const Sibling = () => {
   return (
     <div >
-    <h2 className="text-xl my-2">Sibling Information</h2>
     <Card className="p-0">
     <CardContent className="p-0">
-    
+     <div className='bg-color-primary-light  text-color-primary shadow shadow-gray-100 rounded-t-md p-4 flex  flex-col gap-2'>
+ 
+ <h5 className='text-base font-semibold leading-4'>Sibling Information</h5>
+<span className='text-sm italic'>Manage student sibling information.</span>
+</div>
     
      
     
     
     
-    <div className="alert p-5 rounded-t-md bg-blue-50">
-    
-      <p className='text-sm text-color-primary'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ipsum quia deleniti quasi molestias voluptatibus distinctio inventore est amet, in voluptatum tempore architecto sapiente! Alias vero officia temporibus laboriosam obcaecati?</p>
-    </div>
     <div className=" py-2 px-5">
     
     <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Enter Matric Number <span className='text-red-800'>*</span></label>
@@ -50,7 +49,7 @@ const Sibling = () => {
     
     <div className=" py-2 px-5">
     
-    <Button variant={'primary'} size={'sm'}><FaSave/> Send Request</Button>
+    <Button variant={'success'} size={'sm'}><FaSave/> Send Request</Button>
     </div>
     
     

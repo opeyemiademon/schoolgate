@@ -22,14 +22,25 @@ import Faculty from '@/modules/general/Faculty';
 import AddStaff from '@/modules/staff/AddStaff';
 import EditStaff from '@/modules/staff/EditStaff';
 import StaffBulkRegistration from '@/modules/staff/StaffBulkRegistration';
+import Graduation from '@/modules/student/Graduation';
+import SetupStudent from '@/modules/student/Setup';
+import Transfer from '@/modules/student/Transfer';
+import ChangePassword from '@/modules/student/ChangePassword';
+import CourseRegistration from '@/modules/courses/CourseRegistration';
+import RegistrationList from '@/modules/courses/RegistrationList';
+import Grading from '@/modules/result/Grading';
 
 const Routers = () => {
   return (
     <>
        <Routes>
        <Route  path="/" element={<Records /> } /> 
+           <Route  path="/student/setup" element={<SetupStudent /> } /> 
        <Route  path="/dashboard" element={<Dashboard /> } /> 
+    <Route  path="/student/change_password" element={<ChangePassword /> } /> 
+       <Route  path="/student/transfer" element={<Transfer /> } /> 
        <Route  path="/student/promotion" element={<Promotion /> } /> 
+        <Route  path="/student/graduation" element={<Graduation /> } /> 
        <Route  path="/student" element={<Students /> } /> 
        <Route  path="/student/edit/:code" element={<EditStudent /> } /> 
        <Route  path="/student/add" element={<AddStudent /> } /> 
@@ -38,6 +49,9 @@ const Routers = () => {
 
        <Route  path="/courses" element={<Courses /> } />
        <Route  path="/course/add" element={<AddCourse /> } />
+         <Route  path="/course/student/add" element={<CourseRegistration /> } />
+       <Route  path="/courses/student/list" element={<RegistrationList /> } />
+
        <Route  path="/levels" element={<Level /> } />
        <Route  path="/level/add" element={<AddLevel /> } />
 
@@ -53,6 +67,11 @@ const Routers = () => {
        <Route  path="/staff/add" element={<AddStaff /> } /> 
        <Route  path="/staff/registration/bulk" element={<StaffBulkRegistration /> } /> 
        <Route  path="/staff/edit/:code" element={<EditStaff /> } />
+
+
+
+          <Route  path="/result/grading" element={<Grading /> } />
+
      {/*   <Route  path="*" element={<Home />} />  */}
 
 </Routes>

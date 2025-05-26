@@ -58,18 +58,18 @@ const Sidebar = (props:any) => {
 
  <ul className="sidebar  h-full overflow-scroll   pb-24 ">
         <li> <Link to='#'><FaBuromobelexperte /> Dashboard</Link></li>
-        <li><Link to='/student/setup'><FaCogs/> Setup</Link></li>
-        <li ><Link to='/student/add' className="active"> <FaPlusCircle /> Add New Student</Link></li>
+        <li><Link to='#'><FaCogs/> Setup</Link></li>
+
 
        
        
-        <li> <Link to='/student/registration/bulk'><FaUserFriends/> Bulk  Registration</Link></li>
+        <li> <Link to='/course/add'><FaUserFriends/> Add Course</Link></li>
 
         
         <li className="flex items-center justify-between group   ">
           
           
-        <Link to='/student' className="flex items-center w-full justify-between" > <div className="flex items-center gap-2"> <FaGraduationCap/> Student Records </div>
+        <Link to='/courses' className="flex items-center w-full justify-between" > <div className="flex items-center gap-2"> <FaGraduationCap/> Courses </div>
        <div className="relative group/item "><FaEllipsisV className="hidden group-hover:block group/item "/>
        
        
@@ -99,29 +99,13 @@ const Sidebar = (props:any) => {
 
        </li>
 
-        <li > <Link to='/student/promotion'> <FaCodeFork className="hover:cursor-move" /> Student Promotion</Link></li>
+        <li ><Link to='/course/student/add' className="active"> <FaPlusCircle /> Student Course Registration</Link></li>
 
 
-        <li> <Link to='/student/graduation'><FaChampagneGlasses /> Graduate Student</Link></li>
-        <li><Link to='/student/transfer'> <FaCodeCompare />Change of Program</Link></li>
-     
-        <li><Link to='#'><FaEthernet /> Student Documents</Link></li>
-        <li><Link to='#'> <FaLaptopFile/>Student Review</Link></li>
-        <li><Link to='#'><FaChildren /> Student Activity</Link></li>
-        <li><Link to='/student/change_password'> <FaKey />Change Student Password</Link></li>
-  
+        <li > <Link to='/courses/student/list'> <FaCodeFork className="hover:cursor-move" /> All Registered Courses</Link></li>
 
-        <li><Link to='#'> <FaRegThumbsUp />Student Wallet</Link>   </li>
-        <li className="flex flex-col items-start"><Link to='#' className="font-semibold flex items-center"><FaChevronRight /> Reports</Link>
-        
-        </li>
-<ul className="gap-0 ml-3 ">
-        <li className="text-xs"><Link to='#'> Student Documents</Link></li>
-        <li className="text-xs"><Link to='#'> Student Review</Link></li>
-        <li className="text-xs"><Link to='#'> Student Activity</Link></li>
-        <li className="text-xs"><Link to='#'> Change Student Password</Link></li>
-        <li className="text-xs"><Link to='#'> Student Wallet</Link>   </li>
-</ul>
+
+      
         <div className="border-b border-color-border"></div>
 
 
@@ -129,7 +113,7 @@ const Sidebar = (props:any) => {
         
         </li><>
 <ul className="gap-0 ml-3 ">
-        <li className="text-xs"><Link to='#'> Student Documents</Link></li>
+        <li className="text-xs"><Link to='#'> All Courses</Link></li>
         <li className="text-xs"><Link to='#'> Student Review</Link></li>
         <li className="text-xs"><Link to='#'> Student Activity</Link></li>
         <li className="text-xs"><Link to='#'> Change Student Password</Link></li>

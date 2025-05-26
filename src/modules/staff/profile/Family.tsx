@@ -57,7 +57,7 @@ const Family = () => {
           <th>Fullname</th>
           <th>Relationship</th>
     
-          <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/>NIN</div></th>
+          <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/>Telephone</div></th>
     
       
           

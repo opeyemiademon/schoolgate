@@ -54,6 +54,13 @@ const AddStudent = () => {
 <Card className="p-0">
   <CardContent className="p-0">
     
+    <div className='bg-color-primary-light  text-color-primary shadow shadow-gray-100 rounded-t-md p-4 flex  flex-col gap-2'>
+ 
+ <h5 className='text-base font-semibold leading-4'>New Student Registration</h5>
+<span className='text-sm italic'>Add a new student to the system with their essential details</span>
+</div>
+
+
 <div className='py-5'>
   <div className=" py-2 px-5">
 

@@ -218,7 +218,7 @@ const AddStaff = () => {
 
 <div className=" ">
 
-<label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2  "> Is Smoker? <span className='text-red-800'>*</span></label>
+<label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2  "> Is Academic Staff ? <span className='text-red-800'>*</span></label>
 
 
 <div className="flex gap-10 mt-2">

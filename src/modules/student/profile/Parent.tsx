@@ -32,13 +32,18 @@ const Parent = () => {
             
   return (
     <div >
-    <h2 className="text-xl my-2">Father Information</h2>
+   
     <Card className="p-0">
     <CardContent className="p-0">
     
-    
+     <div className='bg-color-primary-light  text-color-primary shadow shadow-gray-100 rounded-t-md p-4 flex  flex-col gap-2'>
+ 
+ <h5 className='text-base font-semibold leading-4'>Parent Details</h5>
+<span className='text-sm italic'>Manage student parent information for the new academic session.</span>
+</div>
      
-    
+     <h2 className="text-blue-700 text-xl m-2 font-semibold mb-5 border-b border-gray-200 pb-3">Father Information</h2>
+
     <div className="grid grid-cols-2 gap-4">
     
     <div className=" py-2 px-5">
@@ -159,13 +164,10 @@ const Parent = () => {
     </CardContent>
     </Card>
     
-    <hr className="mt-5 text-color-border " />
-    
-    <h2 className="text-xl my-2">Mother Information</h2>
-    <Card className="p-0">
+    <Card className="p-0 mt-5">
     <CardContent className="p-0">
     
-    
+      <h2 className="text-blue-700 text-xl m-2 font-semibold mb-5 border-b border-gray-200 pb-3">Mother Information</h2>
      
     
     <div className="grid grid-cols-2 gap-4">
@@ -288,13 +290,10 @@ const Parent = () => {
     </CardContent>
     </Card>
     
-    <hr className="mt-5 text-color-border " />
-    
-    <h2 className="text-xl my-2">Gaurdian Information</h2>
-    <Card className="p-0">
+    <Card className="p-0 mt-5">
     <CardContent className="p-0">
     
-    
+       <h2 className="text-blue-700 text-xl m-2 font-semibold mb-5 border-b border-gray-200 pb-3">Gaurdian Information</h2>
      
     
     <div className="grid grid-cols-2 gap-4">

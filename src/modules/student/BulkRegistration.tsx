@@ -54,10 +54,11 @@ const BulkRegistration = () => {
       <div className="px-14 py-4">
 <Card className="p-0">
   <CardContent className="p-0">
-  <div className="alert p-5 rounded-t-md bg-blue-50">
-    
-    <p className='text-sm text-color-primary'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ipsum quia deleniti quasi molestias voluptatibus distinctio inventore est amet, in voluptatum tempore architecto sapiente! Alias vero officia temporibus laboriosam obcaecati?</p>
-  </div>
+    <div className='bg-color-primary-light  text-color-primary shadow shadow-gray-100 rounded-t-md p-4 flex  flex-col gap-2'>
+ 
+ <h5 className='text-base font-semibold leading-4'>Register Multiple Students</h5>
+<span className='text-sm italic'>Enter the details for each student in the rows below. You can add more rows by clicking AddMore.</span>
+</div>
 
 
 
@@ -143,7 +144,7 @@ const BulkRegistration = () => {
 <Card className="p-0 m-5 rounded-sm ">
 <CardContent className="p-2 custom-shadow-sm ">
 
-<div className='py-5 z-10'>
+<div className='pb-5 z-10'>
 
 
 

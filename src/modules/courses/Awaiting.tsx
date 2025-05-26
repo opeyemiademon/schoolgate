@@ -10,20 +10,18 @@ import {
 import { Button } from "@/components/ui/button"
 import Topbar from "@/Layout/Topbar"
 import Sidebar from "@/Layout/Sidebar"
-
+import Template from "@/Layout/Template"
 import { RefreshCcw, Search, Trash, X } from "lucide-react"
 import { Switchsm } from "@/components/ui/switchsm"
 import Select from 'react-tailwindcss-select'
 import { selectStyle } from "@/components/GlobalFunction"
 import { FaArrowLeftLong, FaArrowRightLong, FaX } from "react-icons/fa6"
-import {  ModalEdit } from "./Modal"
-import { Link } from "react-router-dom"
-import { ImportStudent } from "./modal/Import"
-import { ExportStudent } from "./modal/Export"
-import { DeleteStudent } from "./modal/Delete"
-import Template from "./Layout/Template"
 
-const Students = () => {
+import { Link } from "react-router-dom"
+import { ImportStudent } from "../student/modal/Import"
+import { ModalEdit } from "../student/Modal"
+
+const AwaitingApproval = () => {
   const [animal, setAnimal] = useState(null);
 const [Modal, setModal]= useState({
   field:false,
@@ -45,39 +43,7 @@ const handleChange = (value:any) => {
 
   return (
 
-   <Template>
-
-<div className="border-b flex justify-between items-center border-color-border w-full py-2 px-6 bg-white">
-<h2 className="flex  gap-2 items-center font-semibold leading-3"><FaGraduationCap className="text-lg"/> Student</h2>
-
-
-
-<div className="flex gap-1 items-center">
-<ImportStudent />
-
-<ExportStudent/>
-
-<a href="#" className="text-sm hover:bg-color-primary-light hover:text-color-primary py-3 px-4 rounded-sm cursor-pointer">Batch Operations</a>
-
-<DeleteStudent/>
-
-
-<a href="#" className="text-sm hover:bg-color-primary-light hover:text-color-primary py-3 px-4 rounded-sm cursor-pointer"><FaShare/></a>
-
-
-<Link to='/student/add' className="rounded-sm   py-2  px-5 bg-color-primary text-white shadow-xs hover:bg-color-primary/80"> Add New Student</Link>
-</div>
-</div>
-
-<div className="px-6  border-b border-color-border bg-white">
-    <ul className="flex items-center gap-4 tab">
-        <li className=" active ">Records</li>
-        <li className="   ">Fields</li>
-        <li className="   ">Connections</li>
-        <li className="   ">Rules</li>
-        <li className="   ">Settings</li>
-    </ul>
-</div>
+<>
 
 
 
@@ -89,8 +55,8 @@ const handleChange = (value:any) => {
 
   <div className="px-6 pt-3 rounded-t-md border-b border-color-border bg-white">
     <ul className="flex items-center gap-4 tab">
-        <li className=" active text-base">nesuer</li>
-        <li className="  text-base">nesuer</li>
+        <li className=" active text-base">view 2</li>
+        <li className="  text-base">view 1</li>
     </ul>
 </div>
 
@@ -191,7 +157,7 @@ const handleChange = (value:any) => {
 
 
 
-<div className={`bg-white border border-color-border  rounded-md shadow-md h-max  mt-2 w-[600px] right-5   py-2 px-4  absolute z-30  max-h-[300px] overflow-scroll  ${Modal.filter?'block':'hidden'} `}>
+<div className={`bg-white border border-color-border  rounded-md shadow-md h-max  mt-2 w-[600px] right-5   py-2 px-4  absolute z-30  max-h-[300px]  overflow-scroll ${Modal.filter?'block':'hidden'} `}>
 
 
 
@@ -563,15 +529,15 @@ const handleChange = (value:any) => {
 
 
 <div className=" my-10 overflow-scroll max-w-[calc(100vw-370px)]">
-<div className="mx-2">
+<div className="m-2">
 
 
 <div className="flex flex-row">
 <Button variant={'white'} size={'md'} className=" border-l-none rounded-r-none">    <input type="checkbox"  />  2 Selected</Button>
 
-<Button variant={'white'} size={'md'} className=" rounded-none">Update</Button>
+<Button variant={'white'} size={'md'} className=" rounded-none">Approve Selected</Button>
 
-<Button variant={'white'} size={'md'} className=" border-r-none rounded-l-none">Delete</Button>
+<Button variant={'white'} size={'md'} className=" border-r-none rounded-l-none">Delete Selected</Button>
 </div>
 
 </div>
@@ -586,28 +552,16 @@ const handleChange = (value:any) => {
       <th >SN</th>
       <th>Record ID</th>
       <th>Date Added</th>
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Profile Picture</div></th>
+      <th>Course</th>
 
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Matric No.</div></th>
+      <th>Student</th>
 
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Student Name</div></th>
+      <th>Department/Level</th>
 
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Gender</div></th>   
-      
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Faculty</div></th>
-
-
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Department</div></th>
-
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Unit</div></th>
-
-
-      <th><div className="flex items-center gap-1"> <FaLink data-tooltip-id="table" data-tooltip-content="Present the exam key larger"/> Current Level</div></th>
-
-
-      <th>Entry Mode</th>
       <th>Status</th>
-      <th >Session</th>
+
+      <th>Approval</th>   
+      
     </tr>
   </thead>
   <tbody>
@@ -625,69 +579,21 @@ const handleChange = (value:any) => {
       </div>
        </div> </td>
       <td ><div className=" ">1  </div></td>
-      <td ><div className=" ">erfggtt </div></td>
-      <td ><div className=" ">erfggtt </div></td>
       <td > <div className=" ">22-03-2025  </div></td>
       <td > <div className="">NSU/NAS/CMP/0035/16/17  <ModalEdit visible={false}  /></div> </td>
-      <td ><div className="cell-active ">Adeleke Monsoor Opeyemi  <ModalEdit visible={true} /></div></td>
+      <td ><div className="cell-actives ">Adeleke Monsoor Opeyemi  <ModalEdit visible={false} /></div></td>
       <td ><div className=" ">Male  <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">200   <ModalEdit visible={false} /></div></td>
+  
       <td ><div className=" ">DE   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" "><div className="p-1 px-2 text-white text-sm bg-[#26C836] rounded-full w-max"> Active </div>   <ModalEdit visible={false} /></div>  </td>
+      <td ><div className=" "><div className="p-1 px-2 text-white text-sm bg-[#26C836] rounded-full w-max"> Registered </div>   <ModalEdit visible={false} /></div>  </td>
 
-      <td > <div className=" ">2024/2025   <ModalEdit visible={false} /></div></td>
+      <td > 
+        <Button size={'sm'}>Approve</Button>
+        <Button size={'sm'} variant={'orange'}>Deny</Button>
+      </td>
     </tr>
 
-    <tr className=" group">
-      <td > <div className="flex gap-2 group"><input type="checkbox"  /> 
-      
-      <div className=" absolute items-center gap-2 hidden group-hover:flex bg-gray-100 ml-5">
-      <FaExpandAlt  data-tooltip-id="table" data-tooltip-content="Edit Record " className="cursor-pointer text-base text-blue-800" />
-      <FaHistory  data-tooltip-id="table" data-tooltip-content="Record history" className="cursor-pointer text-base text-blue-800" />
-      </div>
-       </div> </td>
-       
-         <td ><div className=" ">1  </div></td>
-      <td ><div className=" ">erfggtt </div></td>
-      <td ><div className=" ">erfggtt </div></td>
-      <td > <div className=" ">22-03-2025  </div></td>
-      <td > <div >NSU/NAS/CMP/0035/16/17  <ModalEdit visible={false}  /></div> </td>
-      <td ><div className=" ">Adeleke Monsoor Opeyemi  <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Male  <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" cell-active">Social Science   <ModalEdit visible={true} /></div></td>
-      <td ><div className=" ">200   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">DE   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" "><div className="p-1 px-2 text-white text-sm bg-[#26C836] rounded-full w-max"> Active </div>   <ModalEdit visible={false} /></div>  </td>
-
-      <td > <div className=" ">2024/2025   <ModalEdit visible={false} /></div></td>
-    </tr>
-    <tr className=" group">
-      <td > <div className="flex gap-2 group"><input type="checkbox"  /> 
-      <div className=" absolute items-center gap-2 hidden group-hover:flex bg-gray-100 ml-5">
-      <FaExpandAlt  data-tooltip-id="table" data-tooltip-content="Edit Record " className="cursor-pointer text-base text-blue-800" />
-      <FaHistory  data-tooltip-id="table" data-tooltip-content="Record history" className="cursor-pointer text-base text-blue-800" />
-      </div>
-       </div> </td><td ><div className=" ">1  </div></td>
-      <td ><div className=" ">erfggtt </div></td>
-      <td ><div className=" ">erfggtt </div></td>
-      <td > <div className=" ">22-03-2025  </div></td>
-      <td > <div className="cell-active">NSU/NAS/CMP/0035/16/17  <ModalEdit visible={true}  /></div> </td>
-      <td ><div className=" ">Adeleke Monsoor Opeyemi  <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Male  <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">Social Science   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">200   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" ">DE   <ModalEdit visible={false} /></div></td>
-      <td ><div className=" "><div className="p-1 px-2 text-white text-sm bg-[#26C836] rounded-full w-max"> Active </div>   <ModalEdit visible={false} /></div>  </td>
-
-      <td > <div className=" ">2024/2025   <ModalEdit visible={false} /></div></td>
-    </tr>
+  
   </tbody>
 </table>
 
@@ -699,7 +605,6 @@ const handleChange = (value:any) => {
 
 
 
-
 <div className="flex justify-between items-center bg-white border-t-2 border-t-color-border px-20 py-5 bottom-0 sticky w-full  ">
 
     <h2 className="text-base font-medium">Unsaved Changes</h2>
@@ -707,12 +612,13 @@ const handleChange = (value:any) => {
     <div className="flex gap-3">
     <Button variant={'white'} size='md' className="">Discard</Button>
 
-    <Button variant={'primary'} size='md' className="">Save</Button>
+    <Button variant={'primary'} size='md' className="">Approve All Pending</Button>
     </div>
 </div>
 
-</Template>
+</>
+
   )
 }
 
-export default Students
+export default AwaitingApproval

@@ -16,6 +16,7 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { selectStyle } from '@/components/GlobalFunction'
 import Select from 'react-tailwindcss-select'
 import { Textarea } from '@/components/ui/textarea'
+import Label from '@/components/Label'
 
 export const AddCourseType =(props:any)=> {
 
@@ -50,17 +51,8 @@ export const AddCourseType =(props:any)=> {
 
             <div className=" py-1 px-5">
 
-<label htmlFor="" className="form-title text-base leading-1 text-color-gray-2 "> Course Type Name <span className='text-red-800'>*</span></label>
-<Select
-                value={animal}
-                onChange={handleChange}
-                options={options}
-                primaryColor={"indigo"}
-                isSearchable={true}
-                isClearable={true}
-                placeholder="Select.."
-                classNames={selectStyle}
-            />
+<Label title="Course Type Name" is_reqired={true} />
+<Input />
 </div>
 
 

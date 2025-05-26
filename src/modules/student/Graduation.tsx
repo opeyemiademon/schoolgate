@@ -18,16 +18,22 @@ import RadioGroup, { RadioItem } from '@/components/RadioGroup'
 import { FaCodeFork } from 'react-icons/fa6'
 import { ModalEdit } from './Modal'
 
-const Promotion = () => {
+const Graduation = () => {
 
 
     const [animal, setAnimal] = useState(null);
   const options = [
-    { value: "fox", label: " Increase Level" },
-    { value: "Butterfly", label: " Decrease Level" },
-    { value: "Honeybee", label: " Honeybee" }
+    { value: "fox", label: " Computer Science (400L)" },
+    { value: "Butterfly", label: " Law (500L)" },
+    { value: "Honeybee", label: " Mass Communication (500L)" }
   ];
   
+   const department = [
+    { value: "fox", label: " Computer Science (400L)" },
+    { value: "Butterfly", label: " Law (500L)" },
+    { value: "Honeybee", label: " Mass Communication (500L)" }
+  ];
+
   const handleChange = (value:any) => {
     console.log("value:", value);
     setAnimal(value);
@@ -58,8 +64,8 @@ const Promotion = () => {
 
      <div className='bg-color-primary-light  text-color-primary shadow shadow-gray-100 rounded-t-md p-4 flex  flex-col gap-2'>
  
- <h5 className='text-base font-semibold leading-4'>Student Promotion System</h5>
-<span className='text-sm italic'>Manage student level promotions for the new academic session.</span>
+ <h5 className='text-base font-semibold leading-4'>Student Graduation System</h5>
+<span className='text-sm italic'>Review and process student graduations for the academic session.</span>
 </div>
 
 
@@ -93,37 +99,6 @@ const Promotion = () => {
 
 
 
-<div className=" py-2 px-5">
-
-<div className="grid grid-cols-8">
-
-<div className='col-span-2 flex items-center'>
-
-<label htmlFor="" className="text-sm leading-1 text-color-gray-2 font-semibold "> Faculty </label>
-</div>
-
-<div className='col-span-6'>
-
-  <Select
-                value={animal}
-                onChange={handleChange}
-                options={options}
-                primaryColor={"indigo"}
-                isSearchable={true}
-                isClearable={true}
-                isMultiple={true}
-                placeholder="Select faculty first"
-                classNames={selectStyle}
-            />
-
-</div>
-</div>
-
-</div>
-
- 
-
-
 
 <div className=" py-2 px-5">
 
@@ -139,7 +114,7 @@ const Promotion = () => {
   <Select
                 value={animal}
                 onChange={handleChange}
-                options={options}
+                options={department}
                 primaryColor={"indigo"}
                 isSearchable={true}
                 isClearable={true}
@@ -153,66 +128,6 @@ const Promotion = () => {
 
 </div>
 
-
-
-
-<div className=" py-2 px-5">
-
-<div className="grid grid-cols-8">
-
-<div className='col-span-2 flex items-center'>
-
-<label htmlFor="" className="text-sm leading-1 text-color-gray-2 font-semibold "> Current Level  <span className='text-red-800'>*</span></label>
-</div>
-
-<div className='col-span-6'>
-
-  <Select
-                value={animal}
-                onChange={handleChange}
-                options={options}
-                primaryColor={"indigo"}
-                isSearchable={true}
-                isClearable={true}
-                isMultiple={true}
-                placeholder="Select faculty first"
-                classNames={selectStyle}
-            />
-
-</div>
-</div>
-
-</div>
-
-
-
-<div className=" py-2 px-5">
-
-<div className="grid grid-cols-8">
-
-<div className='col-span-2 flex items-center'>
-
-<label htmlFor="" className="text-sm leading-1 text-color-gray-2 font-semibold "> Promoted To Level  <span className='text-red-800'>*</span></label>
-</div>
-
-<div className='col-span-6'>
-
-  <Select
-                value={animal}
-                onChange={handleChange}
-                options={options}
-                primaryColor={"indigo"}
-                isSearchable={true}
-                isClearable={true}
-                isMultiple={true}
-                placeholder="Select faculty first"
-                classNames={selectStyle}
-            />
-
-</div>
-</div>
-
-</div>
 
    
 
@@ -222,12 +137,12 @@ const Promotion = () => {
 
 <div className='col-span-2 flex items-center'>
 
-<label htmlFor="" className="text-sm leading-1 text-color-gray-2 font-semibold "> Student Matric Number  </label>
+<label htmlFor="" className="text-sm leading-1 text-color-gray-2 font-semibold "> Search Student: </label>
 </div>
 
 <div className='col-span-6'>
 
-  <Input/>
+  <Input placeholder='Enter Student ID or Name'/>
 
 </div>
 </div>
@@ -243,30 +158,35 @@ const Promotion = () => {
 
   </CardContent>
 </Card>
-<hr className="mt-5 text-color-border " />
 
- <h2 className="text-xl my-2">Students for Promotion (100 Level to 200 Level - Computer Science)</h2>
-    <Card className="p-0">
-    <CardContent className="p-4">
+
+    <Card className="p-0 mt-5">
+    <CardContent className="p-0">
     
-    
+     <div className='bg-color-primary-light  text-color-primary shadow shadow-gray-100 rounded-t-md p-4 flex  flex-col gap-2'>
+ 
+ <h5 className='text-base font-semibold leading-4'>Graduation Criteria Overview</h5>
+ <span className='text-sm italic'>Eligible Students for Graduation (Computer Science - 500 Level)</span>
+</div>
      
+<hr className="mb-5 text-color-border " />
+
+
+
+<div className='bg-[#e9f5ff] border border-blue-200 p-4 border-l-4 border-l-[#17a2b8] rounded-md my-6 m-4 '>
+
+    <p className='text-color-blue text-base'><b>Selected Department:</b> Computer Science</p>
+     <p className='text-color-blue text-base'><b>Final Level:</b> 500 Level</p>
+         <p className='text-color-blue text-base'><b>Minimum Required Credit Units:</b> 180 Units</p>
+
+         <p className='italic text-color-blue text-base'>(Note: Criteria may vary by department and program)</p>
+</div>
     
     
     
-    <div className="m-2">
+  
     
-    
-    <div className="flex flex-row">
-    <Button variant={'white'} size={'md'} className=" border-l-none rounded-r-none">    <input type="checkbox"  />  2 Selected</Button>
-    
-    
-    <Button variant={'white'} size={'md'} className=" border-r-none rounded-l-none">Promote All Pending</Button>
-    </div>
-    
-    </div>
-    
-    <div className='my-4 '> 
+    <div className='m-4 '> 
     <table className="custom-table  w-full  rounded-md ">
       <thead>
         <tr className='bg-color-primary text-white '>
@@ -275,11 +195,9 @@ const Promotion = () => {
           <th>Student ID</th>
           <th>Student Name</th>
           <th>Current Level</th>
-    
-          <th>Promotion Status</th>
-    
-      
-          
+          <th>Total Credit Units</th>
+        <th>Graduation Status</th>
+          <th>Action</th>
     
         </tr>
       </thead>
@@ -291,8 +209,14 @@ const Promotion = () => {
           <td ><div className=" ">erfggtt </div></td>
          
      <td ><div className=" ">erfggtt </div></td>
-          <td ><div className=" ">Promoted </div></td>
-    
+     <td ><div className=" ">185 </div></td>
+          <td ><div className=" bg-red-500 w-max">Not Eligible </div></td>
+      <td>
+      <div>
+        <Button variant={'success'} size={'sm'}>Graduate</Button>
+        <Button variant={'default'} size={'sm'}>Hold</Button>
+      </div>
+    </td>
         </tr>
     
            <tr >
@@ -302,9 +226,15 @@ const Promotion = () => {
           <td ><div className=" ">erfggtt </div></td>
          
      <td ><div className=" ">erfggtt </div></td>
-          <td ><div className=" ">Pending </div></td>
+          <td ><div className=" ">178 </div></td>
     
-          
+           <td ><div className=" bg-green-500 w-max">Eligible </div></td>
+      <td>
+      <div>
+        <Button variant={'success'} size={'sm'}>Graduate</Button>
+        <Button variant={'default'} size={'sm'}>Hold</Button>
+      </div>
+    </td>
         </tr>
             <tr >
          
@@ -314,10 +244,34 @@ const Promotion = () => {
          
      <td ><div className=" ">erfggtt </div></td>
           <td ><div className=" ">In Elligible </div></td>
-    
+     <td ><div className=" bg-yellow-500 w-max">On Hold </div></td>
+      <td>
+      <div>
+        <Button variant={'success'} size={'sm'}>Graduate</Button>
+        <Button variant={'default'} size={'sm'}>Hold</Button>
+      </div>
+    </td>
          
         </tr>
        
+        <tr >
+         
+          <td ><div className=" ">1  </div></td>
+          <td ><div className=" ">erfggtt </div></td>
+          <td ><div className=" ">erfggtt </div></td>
+         
+     <td ><div className=" ">erfggtt </div></td>
+          <td ><div className=" ">In Elligible </div></td>
+     <td ><div className=" bg-blue-500 w-max">Graduated </div></td>
+    <td>
+      <div>
+        <Button variant={'success'} size={'sm'}>Graduate</Button>
+        <Button variant={'default'} size={'sm'}>Hold</Button>
+      </div>
+    </td>
+         
+        </tr>
+
       </tbody>
     </table>
     
@@ -334,15 +288,14 @@ const Promotion = () => {
 </div>
 
 
-
 <div className="flex justify-between items-center bg-white border-t-2 border-t-color-border px-20 py-5 bottom-0 sticky w-full  ">
 
-    <h2 className="text-base font-medium">Unsaved Changes</h2>
+    <h2 className="text-sm font-medium">Unsaved Changes</h2>
 
     <div className="flex gap-3">
     <Button variant={'white'} size='md' className="">Discard</Button>
 
-    <Button variant={'primary'} size='md' className="">CPromote All Pending</Button>
+    <Button variant={'primary'} size='md' className="">Graduate All Elligible</Button>
     </div>
 </div>
 
@@ -350,4 +303,4 @@ const Promotion = () => {
   )
 }
 
-export default Promotion
+export default Graduation

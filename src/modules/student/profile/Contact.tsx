@@ -19,10 +19,14 @@ import Select from 'react-tailwindcss-select'
 const Contact = () => {
   return (
     <div >
-    <h2 className="text-xl my-2">Contact Information</h2>
     <Card className="p-0">
     <CardContent className="p-0">
-    
+     <div className='bg-color-primary-light  text-color-primary shadow shadow-gray-100 rounded-t-md p-4 flex  flex-col gap-2'>
+ 
+ <h5 className='text-base font-semibold leading-4'>Contact Information</h5>
+<span className='text-sm italic'>Manage student contact details for the new academic session.</span>
+</div>
+
     <div className=" py-2 px-5">
     
     <label htmlFor="" className="form-title text-sm leading-1 text-color-gray-2 "> Contact Address <span className='text-red-800'>*</span></label>

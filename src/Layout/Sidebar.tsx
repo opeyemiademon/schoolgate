@@ -58,7 +58,7 @@ const Sidebar = (props:any) => {
 
  <ul className="sidebar  h-full overflow-scroll   pb-24 ">
         <li> <Link to='#'><FaBuromobelexperte /> Dashboard</Link></li>
-        <li><Link to='#'><FaCogs/> Setup</Link></li>
+        <li><Link to='/student/setup'><FaCogs/> Setup</Link></li>
         <li ><Link to='/student/add' className="active"> <FaPlusCircle /> Add New Student</Link></li>
 
        
@@ -102,13 +102,13 @@ const Sidebar = (props:any) => {
         <li > <Link to='/student/promotion'> <FaCodeFork className="hover:cursor-move" /> Student Promotion</Link></li>
 
 
-        <li> <Link to='#'><FaChampagneGlasses /> Graduate Student</Link></li>
-        <li><Link to='#'> <FaCodeCompare />Transfer Student</Link></li>
-        <li><Link to='#'><FaSquareFontAwesomeStroke /> Admission Number Pattern</Link></li>
+        <li> <Link to='/student/graduation'><FaChampagneGlasses /> Graduate Student</Link></li>
+        <li><Link to='/student/transfer'> <FaCodeCompare />Change of Program</Link></li>
+     
         <li><Link to='#'><FaEthernet /> Student Documents</Link></li>
         <li><Link to='#'> <FaLaptopFile/>Student Review</Link></li>
         <li><Link to='#'><FaChildren /> Student Activity</Link></li>
-        <li><Link to='#'> <FaKey />Change Student Password</Link></li>
+        <li><Link to='/student/change_password'> <FaKey />Change Student Password</Link></li>
   
 
         <li><Link to='#'> <FaRegThumbsUp />Student Wallet</Link>   </li>
@@ -119,7 +119,7 @@ const Sidebar = (props:any) => {
         <li className="text-xs"><Link to='#'> Student Documents</Link></li>
         <li className="text-xs"><Link to='#'> Student Review</Link></li>
         <li className="text-xs"><Link to='#'> Student Activity</Link></li>
-        <li className="text-xs"><Link to='#'> Change Student Password</Link></li>
+        <li className="text-xs"><Link to='/student/change_password'> Change Student Password</Link></li>
         <li className="text-xs"><Link to='#'> Student Wallet</Link>   </li>
 </ul>
         <div className="border-b border-color-border"></div>
@@ -133,7 +133,7 @@ const Sidebar = (props:any) => {
         <li className="text-xs"><Link to='#'> Student Review</Link></li>
         <li className="text-xs"><Link to='#'> Student Activity</Link></li>
         <li className="text-xs"><Link to='#'> Change Student Password</Link></li>
-        <li className="text-xs"><Link to='#'> Student Wallet</Link>   </li>
+        <li className="text-xs"><Link to='#'> Graduated (Alumni)</Link>   </li>
 </ul>
         <div className="border-b border-color-border"></div>
         </>
