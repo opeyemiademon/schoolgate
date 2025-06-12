@@ -33,11 +33,11 @@ import Select from 'react-tailwindcss-select'
 import { ModalEdit } from './Modal'
 import Basic from './profile/Basic'
 import Contact from './profile/Contact'
-import { Academic } from './profile/Academic'
 import Parent from './profile/Parent'
 import Qualification from './profile/Qualification'
 import File from './profile/File'
 import Sibling from './profile/Sibling'
+import Academic from './profile/Academic'
 
 const EditStudent = () => {
   // State for active tab/step
@@ -154,7 +154,7 @@ const EditStudent = () => {
 
       {/* Main Content Area - Responsive with proper padding */}
       <div className="px-4 sm:px-8 lg:px-14 py-4 pb-24">
-        <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+        <div className="">
           {/* Render the appropriate component based on activeTab */}
           {activeTab === 1 ? (
             <Basic />
@@ -191,8 +191,19 @@ const EditStudent = () => {
         </div>
       </div>
 
+
+
+
+
+
       {/* Sticky Footer - Responsive */}
-      <div className="flex justify-between items-center bg-white border-t border-color-border px-4 sm:px-8 lg:px-20 py-3 sm:py-4 bottom-0 fixed w-full shadow-md z-20">
+      <div className="flex justify-between items-center bg-white border-t border-color-border px-4 sm:px-8 lg:px-20 py-3 sm:py-4 bottom-0 fixed shadow-md z-20 right-0"
+        style={{
+          width: 'calc(100vw - var(--sidebar-offset))',
+          left: 'var(--sidebar-offset)',
+          transition: 'width 0.3s, left 0.3s'
+        }}
+      >
         {hasChanges && (
           <div className="flex items-center">
             <div className="w-2 h-2 rounded-full bg-amber-500 mr-2"></div>
